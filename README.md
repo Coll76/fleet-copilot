@@ -9,14 +9,34 @@ Written for Rayda's Senior Agentic AI Engineer take-home. Python 3.12, LangGraph
 ```console
 $ uv run fleet-copilot ask --tenant acme-001 "Which devices at Acme are low on disk space?"
 
-Two Acme devices are low on disk space: a ThinkPad X1 Carbon with 2.6% free and a MacBook Pro
-with 2.0% free [disk_low/8NM23J95R5I6, disk_low/MT7PJB7N5LRE].
-- 8NM23J95R5I6: 26.5 GB free of 1024 GB (2.6%) [disk_low/8NM23J95R5I6, 8NM23J95R5I6/2026-06-12]
-- MT7PJB7N5LRE: 10.2 GB free of 512 GB (2.0%) [disk_low/MT7PJB7N5LRE, MT7PJB7N5LRE/2026-06-12]
-"Low" follows the policy threshold of 10% free (disk_low_free_pct).
+At Acme, two devices are low on disk space. Both are rated critical and have less than 3% free [disk_low/8NM23J95R5I6, disk_low/MT7PJB7N5LRE].
+
+**Evidence**
+- **ThinkPad X1 Carbon (8NM23J95R5I6)**, owner emp-acme-1005: 2.6% free, which is 26.5 GB of 1024 GB [disk_low/8NM23J95R5I6, 8NM23J95R5I6/2026-06-12].
+- **MacBook Pro (MT7PJB7N5LRE)**, owner emp-acme-1003: 2.0% free, which is 10.2 GB of 512 GB [disk_low/MT7PJB7N5LRE, MT7PJB7N5LRE/2026-06-12].
+...
 ```
 
-<sub>Output abridged.</sub>
+<details>
+<summary>Full answer, including evidence and caveats</summary>
+
+```text
+At Acme, two devices are low on disk space. Both are rated critical and have less than 3% free [disk_low/8NM23J95R5I6, disk_low/MT7PJB7N5LRE].
+
+**Evidence**
+- **ThinkPad X1 Carbon (8NM23J95R5I6)**, owner emp-acme-1005: 2.6% free, which is 26.5 GB of 1024 GB [disk_low/8NM23J95R5I6, 8NM23J95R5I6/2026-06-12].
+- **MacBook Pro (MT7PJB7N5LRE)**, owner emp-acme-1003: 2.0% free, which is 10.2 GB of 512 GB [disk_low/MT7PJB7N5LRE, MT7PJB7N5LRE/2026-06-12].
+- No other device's latest snapshot is under the low-disk threshold [disk_low/8NM23J95R5I6, disk_low/MT7PJB7N5LRE].
+
+**Caveats**
+- "Low disk" uses the policy threshold: less than 10% free (`disk_low_free_pct: 10`) on each device's latest snapshot [disk_low/8NM23J95R5I6, disk_low/MT7PJB7N5LRE].
+- I didn't check how fast disks are filling up, so a device above 10% now could still run low soon. I can run the disk-trend check if you want to see that.
+- You asked for a list, so I haven't proposed any actions. If you want, I can propose a disk cleanup for these two devices.
+```
+
+This is the answer from the recorded eval run (case `qa_low_disk_acme`), so `uv run python evals/run_evals.py --only qa_low` reproduces it offline and writes it to `evals/results/latest.json`. Live runs vary in wording and keep the same facts and citations.
+
+</details>
 
 The bracketed ids are snapshots (`device/day`) and detector findings (`kind/device`). Every one of them was returned by a tool during that turn, and the answer is checked for exactly that before it is shown.
 
