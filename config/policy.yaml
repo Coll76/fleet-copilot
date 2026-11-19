@@ -1,0 +1,81 @@
+# Fleet Copilot policy. Every threshold the agent uses lives here, so an IT admin can
+# read (and change) exactly what "low on disk" or "battery end-of-life" means.
+# The LLM never invents thresholds; it quotes the ones in this file.
+
+thresholds:
+  # Disk
+  disk_low_free_pct: 10          # latest snapshot below this = "low on disk space"
+  disk_trend_horizon_days: 30    # flag a falling disk if projected to fill within this many days
+  disk_trend_min_points: 7       # need at least this many snapshots to fit a trend
+
+  # Memory ("consistently constrained")
+  ram_pressure_used_pct: 80      # a snapshot counts as constrained at or above this utilisation
+  ram_pressure_min_share: 0.75   # ...and the device is "consistently" constrained if this share of snapshots are
+
+  # Battery
+  battery_rated_cycles: 1000     # Apple rates modern MacBook batteries at 1000 cycles; used as a fleet-wide default
+  battery_approaching_share: 0.9 # cycle_count >= 90% of rated = approaching end-of-life
+  battery_fcc_decline_pct: 3.0   # full-charge capacity fall over the window that counts as active degradation
+
+  # OS currency (used by the "older than" questions; os_up_to_date compliance is reported separately)
+  os_minimum:
+    macOS: "15"
+    Windows: "11"
+
+# Software that is not covered by a compliance check but that an IT admin would want surfaced.
+risky_software:
+  uTorrent:
+    category: p2p_file_sharing
+    severity: high
+    reason: Peer-to-peer client. Common malware and data-exfiltration vector, often against acceptable-use policy.
+  TeamViewer:
+    category: remote_access
+    severity: medium
+    reason: Remote-access tool. Legitimate if IT-managed, a takeover risk if user-installed.
+  CleanMyMac X:
+    category: system_utility
+    severity: low
+    reason: Third-party system cleaner with broad disk permissions. Usually unnecessary on managed devices.
+
+# Which components can be upgraded in the field, by model. Apple Silicon Macs have RAM and SSD on
+# the board. ThinkPad X1 Carbon Gen 11 (21CB) has soldered RAM and an M.2 SSD. Dell XPS 15 9530 has
+# SO-DIMM RAM and an M.2 SSD. Unknown models default to "not upgradeable" so the agent never orders
+# a part that cannot be fitted.
+hardware:
+  upgradeable:
+    MacBook Pro: {ram: false, storage: false, battery: true}
+    MacBook Air: {ram: false, storage: false, battery: true}
+    Mac mini: {ram: false, storage: false, battery: false}
+    ThinkPad X1 Carbon: {ram: false, storage: true, battery: true}
+    Dell XPS 15: {ram: true, storage: true, battery: true}
+  ram_options_gb: [16, 32, 64]
+  storage_options_gb: [512, 1024, 2048]
+
+actions:
+  # Each state-changing tool must cite at least one finding of an allowed kind for the same device.
+  create_upgrade_order:
+    components:
+      storage: [disk_low, disk_trend]
+      ram: [ram_pressure]
+      battery: [battery_eol]
+  open_remediation_ticket:
+    # check_id is one of:
+    #   a compliance check id   -> the device's latest snapshot must fail it
+    #   "software:<name>"        -> a risky_software finding must exist for that software on the device
+    #   "disk_cleanup"           -> a disk_low or disk_trend finding must exist for the device
+    require_current_failure: true
+  flag_device_for_replacement:
+    # Replacement is expensive. A single worn component is a repair (create_upgrade_order), not a
+    # replacement. Require findings in at least two different hardware dimensions.
+    min_distinct_hardware_dimensions: 2
+    hardware_dimensions:
+      battery: [battery_eol]
+      memory: [ram_pressure]
+      storage: [disk_low, disk_trend]
+    # Exception: one chronic problem the hardware cannot be upgraded out of. Memory pressure on a
+    # soldered-RAM device qualifies. A full soldered disk does not, because cleanup can fix it.
+    replace_if_not_upgradeable: [memory]
+  notify_employee:
+    max_message_chars: 600
+  limits:
+    max_proposals_per_turn: 10

@@ -1,0 +1,183 @@
+{
+ "acme-001": {
+  "devices": [
+   "1LYSSFD074BB",
+   "7VP16KHV88LM",
+   "8NM23J95R5I6",
+   "9MXJVZ1I0DKA",
+   "DLT35MHGTH2D",
+   "DSYPSES7SKBB",
+   "M4XVHUV1MEPZ",
+   "MT7PJB7N5LRE",
+   "Q3VUITEGQ400",
+   "XSU9UUDGU6AC"
+  ],
+  "employees": [
+   "emp-acme-1000",
+   "emp-acme-1001",
+   "emp-acme-1002",
+   "emp-acme-1003",
+   "emp-acme-1005"
+  ],
+  "low_disk": [
+   "8NM23J95R5I6",
+   "MT7PJB7N5LRE"
+  ],
+  "old_macos_lt_15": [
+   "1LYSSFD074BB",
+   "7VP16KHV88LM",
+   "MT7PJB7N5LRE",
+   "XSU9UUDGU6AC"
+  ],
+  "laptops_failing_high_severity": [],
+  "ram_constrained": [
+   "M4XVHUV1MEPZ"
+  ],
+  "battery_service_recommended": [
+   "7VP16KHV88LM",
+   "8NM23J95R5I6",
+   "M4XVHUV1MEPZ"
+  ],
+  "screen_lock_drift": [
+   "1LYSSFD074BB",
+   "8NM23J95R5I6",
+   "DLT35MHGTH2D",
+   "DSYPSES7SKBB",
+   "MT7PJB7N5LRE"
+  ],
+  "screen_lock_failing_now": [
+   "1LYSSFD074BB",
+   "8NM23J95R5I6",
+   "DLT35MHGTH2D",
+   "DSYPSES7SKBB",
+   "MT7PJB7N5LRE"
+  ],
+  "screen_lock_failing_first_day": 0,
+  "utorrent": [
+   "1LYSSFD074BB"
+  ],
+  "latest_snapshot_ids": {
+   "1LYSSFD074BB": "1LYSSFD074BB/2026-06-12",
+   "7VP16KHV88LM": "7VP16KHV88LM/2026-06-12",
+   "8NM23J95R5I6": "8NM23J95R5I6/2026-06-12",
+   "9MXJVZ1I0DKA": "9MXJVZ1I0DKA/2026-06-12",
+   "DLT35MHGTH2D": "DLT35MHGTH2D/2026-06-12",
+   "DSYPSES7SKBB": "DSYPSES7SKBB/2026-06-12",
+   "M4XVHUV1MEPZ": "M4XVHUV1MEPZ/2026-06-12",
+   "MT7PJB7N5LRE": "MT7PJB7N5LRE/2026-06-12",
+   "Q3VUITEGQ400": "Q3VUITEGQ400/2026-06-12",
+   "XSU9UUDGU6AC": "XSU9UUDGU6AC/2026-06-12"
+  }
+ },
+ "globex-002": {
+  "devices": [
+   "4SEFDLPTKXAM",
+   "CUXW0BQSV1B7",
+   "DXUCJ272DCYX",
+   "E4V0SB5I0MYU",
+   "IZ6K51CBZR8F",
+   "JRZSGXVMKE6M",
+   "Q1AFVLH3YV33",
+   "QPZSXKINA7GP"
+  ],
+  "employees": [
+   "emp-globex-1002",
+   "emp-globex-1003",
+   "emp-globex-1004",
+   "emp-globex-1005"
+  ],
+  "low_disk": [
+   "E4V0SB5I0MYU",
+   "JRZSGXVMKE6M"
+  ],
+  "old_macos_lt_15": [
+   "4SEFDLPTKXAM",
+   "QPZSXKINA7GP"
+  ],
+  "laptops_failing_high_severity": [],
+  "ram_constrained": [
+   "CUXW0BQSV1B7",
+   "JRZSGXVMKE6M"
+  ],
+  "battery_service_recommended": [],
+  "screen_lock_drift": [
+   "CUXW0BQSV1B7",
+   "JRZSGXVMKE6M"
+  ],
+  "screen_lock_failing_now": [
+   "CUXW0BQSV1B7",
+   "JRZSGXVMKE6M"
+  ],
+  "screen_lock_failing_first_day": 0,
+  "utorrent": [
+   "Q1AFVLH3YV33"
+  ],
+  "latest_snapshot_ids": {
+   "4SEFDLPTKXAM": "4SEFDLPTKXAM/2026-06-12",
+   "CUXW0BQSV1B7": "CUXW0BQSV1B7/2026-06-12",
+   "DXUCJ272DCYX": "DXUCJ272DCYX/2026-06-12",
+   "E4V0SB5I0MYU": "E4V0SB5I0MYU/2026-06-12",
+   "IZ6K51CBZR8F": "IZ6K51CBZR8F/2026-06-12",
+   "JRZSGXVMKE6M": "JRZSGXVMKE6M/2026-06-12",
+   "Q1AFVLH3YV33": "Q1AFVLH3YV33/2026-06-12",
+   "QPZSXKINA7GP": "QPZSXKINA7GP/2026-06-12"
+  }
+ },
+ "initech-003": {
+  "devices": [
+   "2MAN6T4DJD95",
+   "DARFCP0BQM2G",
+   "I3JLKILKQTAC",
+   "RLD7WV7J82SH",
+   "SPKRRDF0L786",
+   "W2656QDAE2ZJ",
+   "XZYK11QTPWEC"
+  ],
+  "employees": [
+   "emp-initech-1000",
+   "emp-initech-1001",
+   "emp-initech-1002",
+   "emp-initech-1003",
+   "emp-initech-1004"
+  ],
+  "low_disk": [
+   "DARFCP0BQM2G",
+   "RLD7WV7J82SH"
+  ],
+  "old_macos_lt_15": [
+   "DARFCP0BQM2G",
+   "RLD7WV7J82SH",
+   "SPKRRDF0L786",
+   "XZYK11QTPWEC"
+  ],
+  "laptops_failing_high_severity": [],
+  "ram_constrained": [
+   "I3JLKILKQTAC"
+  ],
+  "battery_service_recommended": [],
+  "screen_lock_drift": [
+   "2MAN6T4DJD95",
+   "SPKRRDF0L786",
+   "XZYK11QTPWEC"
+  ],
+  "screen_lock_failing_now": [
+   "2MAN6T4DJD95",
+   "SPKRRDF0L786",
+   "XZYK11QTPWEC"
+  ],
+  "screen_lock_failing_first_day": 0,
+  "utorrent": [
+   "I3JLKILKQTAC",
+   "W2656QDAE2ZJ"
+  ],
+  "latest_snapshot_ids": {
+   "2MAN6T4DJD95": "2MAN6T4DJD95/2026-06-12",
+   "DARFCP0BQM2G": "DARFCP0BQM2G/2026-06-12",
+   "I3JLKILKQTAC": "I3JLKILKQTAC/2026-06-12",
+   "RLD7WV7J82SH": "RLD7WV7J82SH/2026-06-12",
+   "SPKRRDF0L786": "SPKRRDF0L786/2026-06-12",
+   "W2656QDAE2ZJ": "W2656QDAE2ZJ/2026-06-12",
+   "XZYK11QTPWEC": "XZYK11QTPWEC/2026-06-12"
+  }
+ }
+}
