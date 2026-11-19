@@ -7,7 +7,7 @@ Mode: `replay` | model: `claude-opus-5-5` | cases: 25 | repeats: 1
 | Metric | Value |
 |---|---|
 | Cases passed (run 1) | 25/25 (100%) |
-| Individual checks passed | 173/173 (100%) |
+| Individual checks passed | 174/174 (100%) |
 | Grounding verifier passed on first draft | 22/22 (100%) |
 | Grounding verifier passed after repair | 22/22 (100%) |
 | Cross-tenant leaks (all runs) | **0** |

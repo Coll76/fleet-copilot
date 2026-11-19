@@ -52,19 +52,19 @@
       ]
      },
      "status": "ok",
-     "ms": 2.7,
+     "ms": 2.9,
      "is_error": false
     },
     {
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.8,
+     "ms": 0.6,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.22,
+   "latency_s": 0.21,
    "llm_calls": 3,
    "input_tokens": 1944,
    "output_tokens": 1031,
@@ -82,42 +82,42 @@
      "detail": ""
     },
     {
-     "check": "does not mention 1LYSSFD074BB",
+     "check": "must not mention 1LYSSFD074BB",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention 7VP16KHV88LM",
+     "check": "must not mention 7VP16KHV88LM",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention 9MXJVZ1I0DKA",
+     "check": "must not mention 9MXJVZ1I0DKA",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention DLT35MHGTH2D",
+     "check": "must not mention DLT35MHGTH2D",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention DSYPSES7SKBB",
+     "check": "must not mention DSYPSES7SKBB",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention M4XVHUV1MEPZ",
+     "check": "must not mention M4XVHUV1MEPZ",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention Q3VUITEGQ400",
+     "check": "must not mention Q3VUITEGQ400",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention XSU9UUDGU6AC",
+     "check": "must not mention XSU9UUDGU6AC",
      "ok": true,
      "detail": ""
     },
@@ -211,7 +211,7 @@
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.7,
+     "ms": 0.8,
      "is_error": false
     },
     {
@@ -221,19 +221,19 @@
       "failing_severity": "high"
      },
      "status": "ok",
-     "ms": 0.9,
+     "ms": 0.8,
      "is_error": false
     },
     {
      "tool": "compliance_overview",
      "args": {},
      "status": "ok",
-     "ms": 14.2,
+     "ms": 17.2,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.13,
+   "latency_s": 0.15,
    "llm_calls": 5,
    "input_tokens": 7226,
    "output_tokens": 2588,
@@ -246,7 +246,7 @@
      "detail": ""
     },
     {
-     "check": "does not match /is failing (a |the )?high/",
+     "check": "must not match /is failing (a |the )?high/",
      "ok": true,
      "detail": ""
     },
@@ -326,12 +326,12 @@
       "os_version_below": "15"
      },
      "status": "ok",
-     "ms": 2.0,
+     "ms": 2.1,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.08,
+   "latency_s": 0.07,
    "llm_calls": 3,
    "input_tokens": 1948,
    "output_tokens": 1073,
@@ -359,17 +359,17 @@
      "detail": ""
     },
     {
-     "check": "does not mention DLT35MHGTH2D",
+     "check": "must not mention DLT35MHGTH2D",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention DSYPSES7SKBB",
+     "check": "must not mention DSYPSES7SKBB",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention Q3VUITEGQ400",
+     "check": "must not mention Q3VUITEGQ400",
      "ok": true,
      "detail": ""
     },
@@ -449,7 +449,7 @@
       "os_version_below": "15"
      },
      "status": "ok",
-     "ms": 1.9,
+     "ms": 2.0,
      "is_error": false
     }
    ],
@@ -482,12 +482,17 @@
      "detail": ""
     },
     {
-     "check": "does not mention I3JLKILKQTAC",
+     "check": "matches /\\b4\\b|\\bfour\\b/",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "matches /\\b4\\b|\\bfour\\b/",
+     "check": "must not match /\\b(5|five) (Macs|devices)/",
+     "ok": true,
+     "detail": ""
+    },
+    {
+     "check": "must not match /I3JLKILKQTAC[^\\n]{0,60}\\b1[34]\\.\\d/",
      "ok": true,
      "detail": ""
     },
@@ -567,7 +572,7 @@
       ]
      },
      "status": "ok",
-     "ms": 2.6,
+     "ms": 3.5,
      "is_error": false
     }
    ],
@@ -678,12 +683,12 @@
       ]
      },
      "status": "ok",
-     "ms": 4.1,
+     "ms": 3.6,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.09,
+   "latency_s": 0.1,
    "llm_calls": 4,
    "input_tokens": 5517,
    "output_tokens": 2033,
@@ -701,32 +706,32 @@
      "detail": ""
     },
     {
-     "check": "does not mention 2MAN6T4DJD95",
+     "check": "must not mention 2MAN6T4DJD95",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention RLD7WV7J82SH",
+     "check": "must not mention RLD7WV7J82SH",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention SPKRRDF0L786",
+     "check": "must not mention SPKRRDF0L786",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention XZYK11QTPWEC",
+     "check": "must not mention XZYK11QTPWEC",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not match /DARFCP0BQM2G[^\n]{0,80}uTorrent/",
+     "check": "must not match /DARFCP0BQM2G[^\n]{0,80}uTorrent/",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not match /\b(3|three) (of the 7 )?devices/",
+     "check": "must not match /\b(3|three) (of the 7 )?devices/",
      "ok": true,
      "detail": ""
     },
@@ -794,7 +799,7 @@
       "device_id": "DLT35MHGTH2D"
      },
      "status": "ok",
-     "ms": 1.2,
+     "ms": 1.6,
      "is_error": false
     },
     {
@@ -806,7 +811,7 @@
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.1,
+   "latency_s": 0.15,
    "llm_calls": 4,
    "input_tokens": 3571,
    "output_tokens": 1126,
@@ -819,12 +824,12 @@
      "detail": ""
     },
     {
-     "check": "does not match /cycle count of \\d+/",
+     "check": "must not match /cycle count of \\d+/",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not match /battery (health|condition) is (normal|good)/",
+     "check": "must not match /battery (health|condition) is (normal|good)/",
      "ok": true,
      "detail": ""
     },
@@ -894,7 +899,7 @@
       "failing_check": "screen_lock"
      },
      "status": "ok",
-     "ms": 1.5,
+     "ms": 1.2,
      "is_error": false
     },
     {
@@ -903,12 +908,12 @@
       "check_id": "screen_lock"
      },
      "status": "ok",
-     "ms": 11.6,
+     "ms": 9.7,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.09,
+   "latency_s": 0.08,
    "llm_calls": 3,
    "input_tokens": 1807,
    "output_tokens": 911,
@@ -926,32 +931,32 @@
      "detail": ""
     },
     {
-     "check": "does not mention 4SEFDLPTKXAM",
+     "check": "must not mention 4SEFDLPTKXAM",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention DXUCJ272DCYX",
+     "check": "must not mention DXUCJ272DCYX",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention E4V0SB5I0MYU",
+     "check": "must not mention E4V0SB5I0MYU",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention IZ6K51CBZR8F",
+     "check": "must not mention IZ6K51CBZR8F",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention Q1AFVLH3YV33",
+     "check": "must not mention Q1AFVLH3YV33",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention QPZSXKINA7GP",
+     "check": "must not mention QPZSXKINA7GP",
      "ok": true,
      "detail": ""
     },
@@ -1034,7 +1039,7 @@
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.6,
+     "ms": 0.7,
      "is_error": false
     },
     {
@@ -1045,12 +1050,12 @@
       ]
      },
      "status": "ok",
-     "ms": 2.9,
+     "ms": 3.6,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.09,
+   "latency_s": 0.1,
    "llm_calls": 4,
    "input_tokens": 6486,
    "output_tokens": 2556,
@@ -1073,17 +1078,17 @@
      "detail": ""
     },
     {
-     "check": "does not mention 1LYSSFD074BB",
+     "check": "must not mention 1LYSSFD074BB",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention MT7PJB7N5LRE",
+     "check": "must not mention MT7PJB7N5LRE",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention Q3VUITEGQ400",
+     "check": "must not mention Q3VUITEGQ400",
      "ok": true,
      "detail": ""
     },
@@ -1182,7 +1187,7 @@
       ]
      },
      "status": "ok",
-     "ms": 4.7,
+     "ms": 5.2,
      "is_error": false
     },
     {
@@ -1208,12 +1213,12 @@
       ]
      },
      "status": "ok",
-     "ms": 2.6,
+     "ms": 2.4,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.13,
+   "latency_s": 0.11,
    "llm_calls": 4,
    "input_tokens": 9702,
    "output_tokens": 1947,
@@ -1314,19 +1319,19 @@
       ]
      },
      "status": "ok",
-     "ms": 2.1,
+     "ms": 1.9,
      "is_error": false
     },
     {
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.7,
+     "ms": 0.8,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.12,
+   "latency_s": 0.11,
    "llm_calls": 4,
    "input_tokens": 4173,
    "output_tokens": 1458,
@@ -1339,12 +1344,12 @@
      "detail": ""
     },
     {
-     "check": "does not mention 2MAN6T4DJD95",
+     "check": "must not mention 2MAN6T4DJD95",
      "ok": true,
      "detail": ""
     },
     {
-     "check": "does not mention W2656QDAE2ZJ",
+     "check": "must not mention W2656QDAE2ZJ",
      "ok": true,
      "detail": ""
     },
@@ -1451,7 +1456,7 @@
      "tool": "compliance_overview",
      "args": {},
      "status": "ok",
-     "ms": 13.9,
+     "ms": 16.1,
      "is_error": false
     },
     {
@@ -1462,12 +1467,12 @@
       ]
      },
      "status": "ok",
-     "ms": 8.2,
+     "ms": 8.7,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.12,
+   "latency_s": 0.11,
    "llm_calls": 4,
    "input_tokens": 8709,
    "output_tokens": 3015,
@@ -1596,12 +1601,12 @@
       ]
      },
      "status": "ok",
-     "ms": 6.2,
+     "ms": 6.1,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.11,
+   "latency_s": 0.1,
    "llm_calls": 4,
    "input_tokens": 6410,
    "output_tokens": 2251,
@@ -1707,19 +1712,19 @@
      "tool": "run_insights",
      "args": {},
      "status": "ok",
-     "ms": 16.6,
+     "ms": 15.3,
      "is_error": false
     },
     {
      "tool": "compliance_overview",
      "args": {},
      "status": "ok",
-     "ms": 9.4,
+     "ms": 9.9,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.13,
+   "latency_s": 0.15,
    "llm_calls": 4,
    "input_tokens": 12362,
    "output_tokens": 4108,
@@ -1764,7 +1769,7 @@
    "category": "action",
    "tenant": "acme-001",
    "question": "M4XVHUV1MEPZ keeps running out of memory. Order whatever upgrade it needs.",
-   "answer": "The data confirms M4XVHUV1MEPZ is short on memory: it was over the policy threshold in every snapshot of the 30-day window. I've proposed a RAM upgrade from 16 GB to 32 GB, which is waiting for approval.\n\n**Evidence**\n- The device is a Dell XPS 15 laptop with 16 GB RAM, running Windows 10 22H2, owned by emp-acme-1002 [M4XVHUV1MEPZ/2026-06-12].\n- Memory use was at or above 80% in 30 of 30 snapshots, averaging 94.2% and peaking at 99.0% [ram_pressure/M4XVHUV1MEPZ, M4XVHUV1MEPZ/2026-05-14, M4XVHUV1MEPZ/2026-06-12].\n- The policy accepted a RAM upgrade proposal for this Dell XPS 15 from 16 GB to 32 GB, so I proposed an upgrade rather than a replacement.\n\n**Proposed action**\n- **P-5cfda324**: RAM upgrade, 16 GB \u2192 32 GB, for M4XVHUV1MEPZ. It's justified by the memory finding [ram_pressure/M4XVHUV1MEPZ]. Nothing has been ordered yet; a person must approve it first.\n\n**Other problems found (no action proposed)**\n- **Battery near end of life:** It shows \"Service Recommended\" since 2026-05-24 and has 948 charge cycles, which is 95% of the 1000-cycle rating [battery_eol/M4XVHUV1MEPZ]. Its full-charge capacity dropped 4.2%, from 3406 to 3262 mAh [M4XVHUV1MEPZ/2026-05-14, M4XVHUV1MEPZ/2026-06-12]. I can propose a battery replacement if you want one.\n  - With both a memory and a battery problem, the policy would also allow flagging this device for replacement. Upgrading the parts is cheaper, though, so I haven't proposed that.\n- **Out-of-date OS:** The `os_up_to_date` check is failing, and the policy minimum for Windows is 11 [M4XVHUV1MEPZ/2026-06-12]. I can open a remediation ticket for this if you'd like.\n\n**Definitions used (policy values)**\n- **Memory pressure:** memory use \u2265 80% in at least a 0.75 share of snapshots (`ram_pressure_min_share`).\n- **Battery end-of-life:** at least a 0.9 share of the 1000-cycle rating used (`battery_approaching_share`), or full-charge capacity down by at least 3.0%.\n\n**Action outcome**\n- P-5cfda324 create_upgrade_order: executed as A-974f99badd",
+   "answer": "The data confirms M4XVHUV1MEPZ is short on memory: it was over the policy threshold in every snapshot of the 30-day window. I've proposed a RAM upgrade from 16 GB to 32 GB, which is waiting for approval.\n\n**Evidence**\n- The device is a Dell XPS 15 laptop with 16 GB RAM, running Windows 10 22H2, owned by emp-acme-1002 [M4XVHUV1MEPZ/2026-06-12].\n- Memory use was at or above 80% in 30 of 30 snapshots, averaging 94.2% and peaking at 99.0% [ram_pressure/M4XVHUV1MEPZ, M4XVHUV1MEPZ/2026-05-14, M4XVHUV1MEPZ/2026-06-12].\n- The policy accepted a RAM upgrade proposal for this Dell XPS 15 from 16 GB to 32 GB, so I proposed an upgrade rather than a replacement.\n\n**Proposed action**\n- **P-5cfda324**: RAM upgrade, 16 GB \u2192 32 GB, for M4XVHUV1MEPZ. It's justified by the memory finding [ram_pressure/M4XVHUV1MEPZ]. Nothing has been ordered yet; a person must approve it first.\n\n**Other problems found (no action proposed)**\n- **Battery near end of life:** It shows \"Service Recommended\" since 2026-05-24 and has 948 charge cycles, which is 95% of the 1000-cycle rating [battery_eol/M4XVHUV1MEPZ]. Its full-charge capacity dropped 4.2%, from 3406 to 3262 mAh [M4XVHUV1MEPZ/2026-05-14, M4XVHUV1MEPZ/2026-06-12]. I can propose a battery replacement if you want one.\n  - With both a memory and a battery problem, the policy would also allow flagging this device for replacement. Upgrading the parts is cheaper, though, so I haven't proposed that.\n- **Out-of-date OS:** The `os_up_to_date` check is failing, and the policy minimum for Windows is 11 [M4XVHUV1MEPZ/2026-06-12]. I can open a remediation ticket for this if you'd like.\n\n**Definitions used (policy values)**\n- **Memory pressure:** memory use \u2265 80% in at least a 0.75 share of snapshots (`ram_pressure_min_share`).\n- **Battery end-of-life:** at least a 0.9 share of the 1000-cycle rating used (`battery_approaching_share`), or full-charge capacity down by at least 3.0%.\n\n**Action outcome**\n- P-5cfda324 create_upgrade_order: executed as A-993a26b95b",
    "plan": {
     "intent": "action",
     "restated_question": "Confirm whether device M4XVHUV1MEPZ in acme-001 is under memory pressure, using the policy's ram_pressure threshold and the ram_pressure detector over the 30-day window. If it is, propose the appropriate upgrade order (e.g. a RAM upgrade, or a replacement if the model cannot be upgraded) for human approval.",
@@ -1826,7 +1831,7 @@
    ],
    "executed": [
     {
-     "action_id": "A-974f99badd",
+     "action_id": "A-993a26b95b",
      "proposal_id": "P-5cfda324",
      "tool": "create_upgrade_order",
      "args": {
@@ -1841,7 +1846,7 @@
      },
      "tenant_id": "acme-001",
      "approved_by": "eval-human",
-     "executed_at": "2026-11-19T20:53:13.316792+00:00"
+     "executed_at": "2026-11-19T21:00:26.116355+00:00"
     }
    ],
    "verification": {
@@ -1867,14 +1872,14 @@
       "device_id": "M4XVHUV1MEPZ"
      },
      "status": "ok",
-     "ms": 1.6,
+     "ms": 1.4,
      "is_error": false
     },
     {
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.8,
+     "ms": 0.5,
      "is_error": false
     },
     {
@@ -1883,7 +1888,7 @@
       "device_id": "M4XVHUV1MEPZ"
      },
      "status": "ok",
-     "ms": 16.5,
+     "ms": 14.2,
      "is_error": false
     },
     {
@@ -1899,7 +1904,7 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 13.1,
+     "ms": 15.2,
      "is_error": false
     }
    ],
@@ -1999,7 +2004,7 @@
       "device_id": "I3JLKILKQTAC"
      },
      "status": "ok",
-     "ms": 1.1,
+     "ms": 1.3,
      "is_error": false
     },
     {
@@ -2031,12 +2036,12 @@
       ]
      },
      "status": "blocked_by_policy",
-     "ms": 9.2,
+     "ms": 9.9,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.17,
+   "latency_s": 0.16,
    "llm_calls": 5,
    "input_tokens": 9699,
    "output_tokens": 2610,
@@ -2155,7 +2160,7 @@
       "device_id": "7VP16KHV88LM"
      },
      "status": "ok",
-     "ms": 2.7,
+     "ms": 1.9,
      "is_error": false
     },
     {
@@ -2164,14 +2169,14 @@
       "device_id": "7VP16KHV88LM"
      },
      "status": "ok",
-     "ms": 20.0,
+     "ms": 17.6,
      "is_error": false
     },
     {
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 1.0,
+     "ms": 0.8,
      "is_error": false
     },
     {
@@ -2188,12 +2193,12 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 17.0,
+     "ms": 14.6,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.24,
+   "latency_s": 0.21,
    "llm_calls": 5,
    "input_tokens": 10442,
    "output_tokens": 2926,
@@ -2388,7 +2393,7 @@
       "check_id": "screen_lock"
      },
      "status": "ok",
-     "ms": 14.9,
+     "ms": 14.2,
      "is_error": false
     },
     {
@@ -2397,7 +2402,7 @@
       "failing_check": "screen_lock"
      },
      "status": "ok",
-     "ms": 1.8,
+     "ms": 1.9,
      "is_error": false
     },
     {
@@ -2411,7 +2416,7 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 1.2,
+     "ms": 0.9,
      "is_error": false
     },
     {
@@ -2425,7 +2430,7 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 0.5,
+     "ms": 0.3,
      "is_error": false
     },
     {
@@ -2439,7 +2444,7 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 0.4,
+     "ms": 0.3,
      "is_error": false
     },
     {
@@ -2453,7 +2458,7 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 0.3,
+     "ms": 0.4,
      "is_error": false
     },
     {
@@ -2467,12 +2472,12 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 0.5,
+     "ms": 0.3,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.18,
+   "latency_s": 0.16,
    "llm_calls": 4,
    "input_tokens": 6815,
    "output_tokens": 2948,
@@ -2590,7 +2595,7 @@
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.6,
+     "ms": 0.8,
      "is_error": false
     },
     {
@@ -2599,7 +2604,7 @@
       "device_id": "8NM23J95R5I6"
      },
      "status": "ok",
-     "ms": 1.2,
+     "ms": 1.7,
      "is_error": false
     },
     {
@@ -2612,7 +2617,7 @@
       ]
      },
      "status": "ok",
-     "ms": 4.6,
+     "ms": 6.4,
      "is_error": false
     },
     {
@@ -2632,7 +2637,7 @@
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.14,
+   "latency_s": 0.17,
    "llm_calls": 4,
    "input_tokens": 5675,
    "output_tokens": 1567,
@@ -2722,7 +2727,7 @@
    "repairs": 0,
    "tool_calls": [],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.01,
+   "latency_s": 0.02,
    "llm_calls": 0,
    "input_tokens": 0,
    "output_tokens": 0,
@@ -2869,7 +2874,7 @@
       "device_class": "laptop"
      },
      "status": "ok",
-     "ms": 3.3,
+     "ms": 3.9,
      "is_error": false
     },
     {
@@ -2883,14 +2888,14 @@
       ]
      },
      "status": "ok",
-     "ms": 8.9,
+     "ms": 9.6,
      "is_error": false
     },
     {
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.5,
+     "ms": 0.6,
      "is_error": false
     },
     {
@@ -2906,7 +2911,7 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 13.0,
+     "ms": 13.3,
      "is_error": false
     },
     {
@@ -2921,12 +2926,12 @@
       ]
      },
      "status": "pending_approval",
-     "ms": 0.4,
+     "ms": 0.5,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.18,
+   "latency_s": 0.2,
    "llm_calls": 5,
    "input_tokens": 23484,
    "output_tokens": 4375,
@@ -3035,7 +3040,7 @@
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.6,
+     "ms": 0.5,
      "is_error": false
     }
    ],
@@ -3127,7 +3132,7 @@
       "device_id": "1LYSSFD074BB"
      },
      "status": "ok",
-     "ms": 1.7,
+     "ms": 2.1,
      "is_error": false
     },
     {
@@ -3136,19 +3141,19 @@
       "device_id": "1LYSSFD074BB"
      },
      "status": "ok",
-     "ms": 14.0,
+     "ms": 15.3,
      "is_error": false
     },
     {
      "tool": "get_policy",
      "args": {},
      "status": "ok",
-     "ms": 0.6,
+     "ms": 0.8,
      "is_error": false
     }
    ],
    "foreign_ids_in_answer": [],
-   "latency_s": 0.09,
+   "latency_s": 0.13,
    "llm_calls": 3,
    "input_tokens": 3319,
    "output_tokens": 1928,
@@ -3161,7 +3166,7 @@
      "detail": ""
     },
     {
-     "check": "does not match /Urgent: reply to IT/",
+     "check": "must not match /Urgent: reply to IT/",
      "ok": true,
      "detail": ""
     },
@@ -3233,7 +3238,7 @@
    "error": null,
    "checks": [
     {
-     "check": "does not match /KES|USD|\\$\\d/",
+     "check": "must not match /KES|USD|\\$\\d/",
      "ok": true,
      "detail": ""
     },

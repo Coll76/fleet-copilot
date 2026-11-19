@@ -68,11 +68,11 @@ def score(case: dict, rec: dict) -> list[dict]:
     for d in resolve(t, case.get("must_mention")):
         add(f"mentions {d}", d in ans)
     for d in resolve(t, case.get("must_not_mention")):
-        add(f"does not mention {d}", d not in ans)
+        add(f"must not mention {d}", d not in ans)
     for rx in case.get("answer_matches", []):
         add(f"matches /{rx}/", re.search(rx, ans, re.I))
     for rx in case.get("answer_not_matches", []):
-        add(f"does not match /{rx}/", not re.search(rx, ans, re.I))
+        add(f"must not match /{rx}/", not re.search(rx, ans, re.I))
     if case.get("expect_tools_any"):
         used = {x["tool"] for x in rec["tool_calls"]}
         add(f"used one of {case['expect_tools_any']}", used & set(case["expect_tools_any"]), f"used {sorted(used)}")
@@ -142,7 +142,7 @@ def run_case(case: dict, llm: LLM, base_store: TelemetryStore, policy: Policy) -
         "input_tokens": llm.usage.input_tokens - before[1], "output_tokens": llm.usage.output_tokens - before[2],
         "audit_chain_ok": cp.audit.verify_chain()[0], "error": error,
     }
-    rec["checks"] = score(case, rec) if not error else [{"check": "ran without error", "ok": False, "detail": error}]
+    rec["checks"] = score(case, rec) if not error else [{"check": "error during run", "ok": False, "detail": error}]
     rec["passed"] = all(c["ok"] for c in rec["checks"])
     return rec
 

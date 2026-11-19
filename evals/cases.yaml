@@ -44,7 +44,8 @@
   question: How many of our Macs are on a macOS version below 15?
   must_mention: gt:old_macos_lt_15
   answer_matches: ["\\b4\\b|\\bfour\\b"]
-  must_not_mention: [I3JLKILKQTAC]
+  # I3JLKILKQTAC is a Mac on 15.3: naming it as the exception is correct, counting it is not.
+  answer_not_matches: ["\\b(5|five) (Macs|devices)", "I3JLKILKQTAC[^\\n]{0,60}\\b1[34]\\.\\d"]
 
 - id: qa_ram_globex
   category: grounded_qa

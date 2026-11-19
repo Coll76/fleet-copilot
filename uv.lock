@@ -146,8 +146,7 @@ name = "fleet-copilot"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "langchain-anthropic" },
-    { name = "langchain-core" },
+    { name = "anthropic" },
     { name = "langgraph" },
     { name = "pydantic" },
     { name = "pyyaml" },
@@ -161,9 +160,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "langchain-anthropic", specifier = ">=0.3" },
-    { name = "langchain-core", specifier = ">=0.3" },
-    { name = "langgraph", specifier = ">=0.4" },
+    { name = "anthropic", specifier = ">=2.11" },
+    { name = "langgraph", specifier = ">=1.2" },
     { name = "pydantic", specifier = ">=2.7" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "rich", specifier = ">=13.7" },
@@ -328,20 +326,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/46/cb/2c3112a061a718d93866c2555dad1e9d53865e4703d0f3be550d252b277b/jsonpointer-3.12.tar.gz", hash = "sha256:7a3dcc11b64053eaa9c549e85e413f8d40a075215f793a331bed9182a14251ae", size = 23217, upload-time = "2026-11-11T09:34:22.894Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/72/07/3c953fceee478798f6bdf7b39e0da0793f437e8b5f9e9e1360fba32fb25c/jsonpointer-3.12-py3-none-any.whl", hash = "sha256:89f391335ee2719ae72149e1bf30a4d4c7c5d92f15a3f53faa8d20cc7c6c7f19", size = 10562, upload-time = "2026-11-11T09:34:21.711Z" },
-]
-
-[[package]]
-name = "langchain-anthropic"
-version = "1.7.11"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "anthropic" },
-    { name = "langchain-core" },
-    { name = "pydantic" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/da/95/cd1e48f621e6c26904fc1f0e1cb6ddd8638f29ebba02e06a19e72f7c238c/langchain_anthropic-1.7.11.tar.gz", hash = "sha256:12bbe7f7f427b96ddc7d6db790b327a095172bb0711cb60c417f83464decc04c", size = 746908, upload-time = "2026-11-18T15:20:05.857Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/e0/65/0ad491e95072c65dbe44c87288d83f102de3490f1b04c336510ddc47e1ef/langchain_anthropic-1.7.11-py3-none-any.whl", hash = "sha256:1610011c7da9f30f04ef7f3118168acaf034afe9b2b0ceb76c73a9bbb25bc90b", size = 66431, upload-time = "2026-11-18T15:20:04.378Z" },
 ]
 
 [[package]]
