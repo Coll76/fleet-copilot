@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Tests and offline evals
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --locked
+
+      - name: Unit tests
+        run: uv run pytest -q
+
+      - name: Agent evals (replayed from recorded model calls)
+        env:
+          FLEET_LLM_MODE: replay
+        run: uv run python evals/run_evals.py --mode replay
+
+      - name: Verifier mutation test
+        run: uv run python evals/verifier_mutations.py
+
+      - name: Eval report
+        if: always()
+        run: |
+          cat evals/results/latest.md >> "$GITHUB_STEP_SUMMARY"
+          cat evals/results/mutations.md >> "$GITHUB_STEP_SUMMARY" || true
