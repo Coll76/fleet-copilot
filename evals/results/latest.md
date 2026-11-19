@@ -19,6 +19,19 @@ Mode: `replay` | model: `claude-opus-5-5` | cases: 25 | repeats: 1
 | Tokens in / out (all runs) | 149,966 / 48,769 |
 | Estimated cost (all runs, USD) | 1.6262 |
 
+## Metrics
+
+| Metric | Value | Definition |
+|---|---|---|
+| Device recall | 30/30 (100%) | Required devices named in the answer, over all required devices |
+| Device precision | 30/30 (100%) | Required devices named, over required plus listed distractor devices named |
+| Tool selection | 8/8 (100%) | Cases that called at least one of the expected tools |
+| Refusals honoured | 2/2 (100%) | Cross-tenant attacks refused |
+| False refusals | 0/19 (0%) | In-scope questions (QA, insight, action) wrongly refused |
+| Citation validity | 174/174 (100%) | Citations in final drafts that a tool returned in the same turn |
+| Action correctness | 8/8 (100%) | Action cases whose proposals match expectations exactly |
+| Proposals blocked by policy | 1 | Action tool calls the policy engine rejected (model tried, code refused) |
+
 ## By category
 
 | Category | Passed |

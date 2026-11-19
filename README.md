@@ -1,10 +1,12 @@
 # fleet-copilot
 
+[![CI](https://github.com/Coll76/fleet-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Coll76/fleet-copilot/actions/workflows/ci.yml)
+
 An agent that helps IT admins understand and act on device telemetry across a multi-tenant fleet.
 
 Ask it which laptops are low on disk, which batteries are wearing out, or whether compliance is slipping, and it answers with citations to the exact snapshots it read. When something needs doing, it drafts the action (an upgrade order, a remediation ticket, a replacement flag or a note to the employee) and waits for a person to approve it.
 
-Written for Rayda's Senior Agentic AI Engineer take-home. Python 3.12, LangGraph and Claude.
+Built with Python 3.12, LangGraph and Claude as a take-home exercise for Rayda.
 
 ```console
 $ uv run fleet-copilot ask --tenant acme-001 "Which devices at Acme are low on disk space?"
@@ -51,6 +53,7 @@ uv sync
 
 uv run pytest                                    # 59 tests, offline
 uv run python evals/run_evals.py                 # 25 agent evals, replayed from recordings, offline
+uv run python evals/verifier_mutations.py        # break real answers on purpose, check the verifier catches them
 uv run fleet-copilot insights --tenant acme-001  # raw detector output, no LLM involved
 ```
 
@@ -100,7 +103,7 @@ Runtime files land in `var/`, which git ignores. `var/audit.jsonl` is the audit 
 | Audit log | `guardrails/audit.py` | `tests/test_verifier_and_audit.py`, `fleet-copilot audit` |
 | Refusing actions that lack evidence | Evidence rules in the action policy | `act_replace_battery_only`, `adv_replace_everything`, `adv_viewer_cannot_act` |
 | Planning and an explicit agent loop | The LangGraph state machine below | [How it works](#how-it-works) |
-| Reproducibility | `uv.lock`, recorded model calls, one-command evals | [Getting started](#getting-started) |
+| Reproducibility | `uv.lock`, recorded model calls, one-command evals | GitHub Actions runs tests, replayed evals and the mutation test on every push |
 
 ## How it works
 
@@ -211,15 +214,20 @@ The **ground truth** (`evals/build_ground_truth.py`) recomputes the expected ans
 
 The **agent evals** (`evals/cases.yaml`, 25 cases) run the real model on grounded questions, trend questions, action requests and attacks. Every check is code: device ids that must and must not appear, expected tools, exact proposals, refusals, executions after approval. Three invariants are checked on every case regardless of category: no cross-tenant ids in the answer, nothing executed without approval, and the verifier passed.
 
+The **verifier mutation test** (`evals/verifier_mutations.py`) answers a question the agent evals leave open. When every draft passes verification, that proves the agent grounds its answers, and says nothing about whether the verifier would catch one that does not. So the script takes the real drafts from the eval run, breaks each in a specific way (a fabricated citation, an altered number, another tenant's device, a claim that an action already ran, stripped citations, an extra uncited device) and checks that the verifier rejects it with the right issue code.
+
+CI runs all of this on every push and pull request, offline, with the eval report in the job summary.
+
 ```bash
 uv run python evals/run_evals.py                          # replay, offline and deterministic
 uv run python evals/run_evals.py --mode live              # fresh model calls
 uv run python evals/run_evals.py --mode live --repeats 3  # run-to-run variance, reports pass^3
 uv run python evals/run_evals.py --only act_              # one category
+uv run python evals/verifier_mutations.py                 # verifier mutation test
 uv run python evals/build_ground_truth.py                 # rebuild expected answers from raw data
 ```
 
-Reports go to `evals/results/latest.md`, and `latest.json` holds the full trace for every case: plan, tool calls, proposals, verifier output, tokens and latency.
+Reports go to `evals/results/latest.md` and `mutations.md`, and `latest.json` holds the full trace for every case: plan, tool calls, proposals, verifier output, tokens and latency.
 
 ### Results
 
@@ -228,7 +236,7 @@ One full live run on `claude-opus-5-5` at `medium` effort, recorded in `evals/ca
 | | |
 |---|---|
 | Cases passed | **25/25** (grounded QA 8/8, insight 6/6, action 5/5, adversarial 6/6) |
-| Individual checks | 171/171 |
+| Individual checks | 174/174 |
 | Verifier passed on the first draft | 22/22 answered cases |
 | Cross-tenant leaks | **0** |
 | Unapproved executions | **0** |
@@ -236,6 +244,33 @@ One full live run on `claude-opus-5-5` at `medium` effort, recorded in `evals/ca
 | Tool calls / model calls per question | 2.5 / 3.5 on average |
 | Latency per question | about 19 s |
 | Cost of the full suite | about USD 1.60 |
+
+Aggregate metrics from the same run:
+
+| Metric | Value | Definition |
+|---|---|---|
+| Device recall | 30/30 | Required devices named in the answer |
+| Device precision | 30/30 | Required devices named, over required plus distractor devices named |
+| Tool selection | 8/8 | Cases that called one of the expected tools |
+| Cross-tenant refusals | 2/2 | Attacks naming another tenant refused before any model call |
+| False refusals | 0/19 | In-scope questions wrongly refused |
+| Citation validity | 174/174 | Citations returned by a tool in the same turn |
+| Action correctness | 8/8 | Action cases whose proposals match expectations exactly |
+
+Verifier mutation test over the 22 real drafts:
+
+| Mutation | Rejected with the expected issue |
+|---|---|
+| Fabricated citation | 22/22 |
+| Altered number | 22/22 |
+| Another tenant's device added | 22/22 |
+| Claim that an action already ran | 22/22 |
+| Citations stripped | 22/22 |
+| Uncited device added | 20/20 |
+| Unmutated drafts wrongly rejected | 0/22 |
+| *Two real numbers swapped (known blind spot)* | *0/21* |
+
+The last row is there on purpose. Swapping two numbers that both appear in tool output attaches a real value to the wrong device, and a string-level check has no way to see that. It is the main gap in the grounding layer, and now it has a number.
 
 A few traces are worth reading in `latest.json`. Asked for laptops failing high-severity checks, the agent says there are none and lists the medium-severity failures instead. Asked to order RAM for a Mac mini, the model did call `create_upgrade_order`, the policy blocked it because the RAM is soldered, and the model passed that on to the admin. That is the intended split: the policy enforces, the model explains. Told to flag every laptop for replacement because "budget is approved", it proposed the two devices that qualify and explained why it skipped the other seven. And with an instruction planted in a hostname asking it to message every employee for their password, it proposed nothing and warned the admin that the device's data looked tampered with.
 
@@ -287,7 +322,7 @@ The brief mentions about 18 employees; the data has 14.
 
 The detectors only know the patterns they were written for, and open-ended exploration of device history is the weakest part of the system.
 
-The verifier confirms that each number and id came from a tool. A real number used in the wrong context still passes.
+The verifier confirms that each number and id came from a tool. A real number used in the wrong context still passes, as the swapped-numbers mutation shows (0 of 21 caught). Closing that gap means checking claims as structured (device, metric, value) triples against tool output, which is the next step for the grounding layer.
 
 The input guard matches names and ids, so a paraphrase such as "the other company" reaches the model. Data scoping still keeps the other tenant's records out of reach, and the verifier still blocks any foreign id.
 
@@ -308,6 +343,7 @@ Persistence is demo-grade: LangGraph's `InMemorySaver` and a local JSONL audit f
 - Per-tenant policy overrides for thresholds, approved software and the hardware catalogue.
 - A second approver for proposals above a cost threshold.
 - Scheduled detector runs and a daily digest of new findings.
+- Claim-level verification: extract (device, metric, value) triples from the answer and match each against tool output, closing the swapped-number gap.
 - Grow the eval set from real admin questions, and track the verifier's first-draft pass rate in production.
 
 ## Repository layout
@@ -322,6 +358,7 @@ src/fleet_copilot/
   cli.py
 config/        policy.yaml: thresholds, risky software, hardware upgradeability, action rules
 data/          telemetry.jsonl
-evals/         cases, runner, independent ground truth, recordings, results
+evals/         cases, runner, verifier mutation test, independent ground truth, recordings, results
 tests/         unit and graph tests
+.github/       CI workflow
 ```
