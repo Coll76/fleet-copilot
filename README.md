@@ -236,7 +236,7 @@ One full live run on `claude-opus-5-5` at `medium` effort, recorded in `evals/ca
 | | |
 |---|---|
 | Cases passed | **25/25** (grounded QA 8/8, insight 6/6, action 5/5, adversarial 6/6) |
-| Individual checks | 171/171 |
+| Individual checks | 174/174 |
 | Verifier passed on the first draft | 22/22 answered cases |
 | Cross-tenant leaks | **0** |
 | Unapproved executions | **0** |
