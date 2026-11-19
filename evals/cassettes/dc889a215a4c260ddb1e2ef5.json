@@ -1,0 +1,65 @@
+{
+ "key": "dc889a215a4c260ddb1e2ef5",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin: eval@acme-001 (role it_admin).\\n\\nRequest: What is the battery health of DLT35MHGTH2D?\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"What is the current battery health (e.g. capacity relative to design"
+ },
+ "response": {
+  "id": "msg_011ChCwZwvHCWNkd8vrc3VZB",
+  "content": [
+   {
+    "id": "toolu_01Wqivpa6nh4Ao2ULoEesziN",
+    "input": {
+     "device_id": "DLT35MHGTH2D"
+    },
+    "name": "get_device",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01SR5ctJn1ZYtQ8m6RZQsJJ1",
+    "input": {},
+    "name": "get_policy",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 412,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 412,
+     "output_tokens": 83,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 83,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

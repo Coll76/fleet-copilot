@@ -1,0 +1,76 @@
+{
+ "key": "7ae207d05494db0f45cb1473",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin: eval@acme-001 (role it_admin).\\n\\nRequest: M4XVHUV1MEPZ keeps running out of memory. Order whatever upgrade it needs.\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"Confirm whether device M4XVHUV1MEPZ i"
+ },
+ "response": {
+  "id": "msg_011ChCwnWWRXFmvoJJn3GTPn",
+  "content": [
+   {
+    "id": "toolu_016Cj5ShQLWeBdUpGjMXWFWk",
+    "input": {
+     "device_id": "M4XVHUV1MEPZ"
+    },
+    "name": "get_device",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_016Qy7z9G5zuALGePxqkJEJT",
+    "input": {},
+    "name": "get_policy",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01LYc8TdYDSaQQkZGeVABmWo",
+    "input": {
+     "device_id": "M4XVHUV1MEPZ"
+    },
+    "name": "run_insights",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 4539
+   },
+   "cache_creation_input_tokens": 4539,
+   "cache_read_input_tokens": 0,
+   "inference_geo": "global",
+   "input_tokens": 793,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 4539
+     },
+     "cache_creation_input_tokens": 4539,
+     "cache_read_input_tokens": 0,
+     "input_tokens": 793,
+     "output_tokens": 144,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 144,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

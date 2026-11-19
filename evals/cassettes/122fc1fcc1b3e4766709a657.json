@@ -1,0 +1,49 @@
+{
+ "key": "122fc1fcc1b3e4766709a657",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Open remediation tickets for every device that is currently failing the screen lock check.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwtD18PYVgUVkMyCUjW",
+  "content": [
+   {
+    "text": "{\"intent\":\"action\",\"restated_question\":\"Identify all devices in acme-001 whose latest snapshot shows a failing screen lock compliance check, and propose one remediation ticket per device for human approval.\",\"assumptions\":[\"'Currently failing' means the screen lock check is failing on the device's latest telemetry snapshot.\",\"'Screen lock check' maps to the compliance check named for screen lock / auto-lock in the telemetry.\",\"Tickets are only proposed and require human approval before they are created.\",\"One ticket per affected device.\"],\"steps\":[{\"tool\":\"query_devices\",\"purpose\":\"List every device whose latest snapshot has the screen lock check failing, with owner details.\"},{\"tool\":\"open_remediation_ticket\",\"purpose\":\"Propose a remediation ticket for each device returned, citing the failing screen lock check, for admin approval.\"}],\"may_propose_actions\":true,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 54,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 54,
+     "output_tokens": 301,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 301,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

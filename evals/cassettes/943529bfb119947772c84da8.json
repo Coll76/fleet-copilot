@@ -1,0 +1,54 @@
+{
+ "key": "943529bfb119947772c84da8",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: globex-002. Admin role: it_admin.\\n\\nRequest: Which machines are short on memory?\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwWPmun7YdU4sbCUZLc",
+  "content": [
+   {
+    "signature": "CAQSjQoKEAgUGAI4AUIIdGhpbmtpbmcSDMPegyfzqleUK7whMRoMx8at7cwJHHBLeUofIjAqObOXUDj2yAk00mjF1SPYxizgKQyRY0Lds8XfipGSJv/0Gt/dtGBS+WRF47Y0lYkqqgkR1QEZv+yBtSlRiLxaLMnMIY0VXtyLCLtNHfQc9ncPKpmkrEP3YOyYhKrYzc3ywH+aD9ObJ1bnrp+DS1VkrI0THOmYmrSUaff+9uekPeynGNPErLu3KcZmpRtGc8P29WwycOi0W6QyE8A3dApJxoTmwrynJK3XH59nHPw79DQH+do9r655wYuGm7hzndg2fjoNZdr/KfOzOLh1uKqg29a+kD8RPtjdkFkq9tPcmsMXnbtgPTGu8P0TQj/YrgLu8FSxOWx4iHq2rBf+WH3J4NniFuMnSru9RbthWx9f/YexC/ay3wQ9D9sgYuoLOjXg+vaGG7N+XnDA9wY+qufjYNEAIzWjphOO8kjzZnZtfUlZumE46cpKpLWnfdT4gdME+b05ZjPwaJulJBaIoVY1pnzeaqDMdOGTGLBFDfUWKrCVYUPzyJbKYbdR7KMIrgXLDQGbVOhjbEcFYeZnRvhOBJARylwmTXAPiv6eHesfRy8K7x5tlOCvwVyIhsUum1e0+v09qKQHSrch064q7v6hh9liph9GdMNKUQsQcm+Qx/bPBZpjGV2msz/MiSjXuJFTQ6Fhsw5pioErLvD7YAiZLyrXLG9BflHpChEHKt5Bkf3BuJJtUgjvWLTKwA4kTcfutBAkEscIzL6YwnCY7tUOGPuPHq1wu6IiH1CLszp7eOzbVRqA2KSuUduY+J2PoeRPydZbH8+7MRSoeydrTlRVCShf0rnaA9Sv8eWR52IUN+wywazKaBi+P7c3eYLrF7GcwE/15+nS9bz/PjXK2Y9hcs+yqHlPpsww74Xs7/+HLPZ/OltReNpc4bBCs2i7ZUX7vAgcubGAdgofy7fYeADPmoWfKJR3a1ZaOYV52SI9OgZUIRyjoLQOP0WsIEfp4Ol1+lcOTBA4aE3yvlMZj+MgKmU24BC7GTKy9+t0/ZktGZUGrWjDBZ8NsMN0NoxhSMhcI1VygQJcnTJhpYLPWnJrJ+Y5jXF+Uhrh0JF0BWxG4834HchfQpkBKqzr3yzXTaEy+htZoNQDtNVahKAB4LW+pzVoNjMq07nmE+3XdMF4lv0kvXu1RSLyUlA5GQm/bHtzvkwWnBNOkN6vtuZB8PQNZMd8jzUmPxFnVOwpzdP1W4o1TfQj3wzX9rQNqWoaudHJhjUtE8IBRjaH5esATSTpJ6vL86HkGMDLM/KU88Egs5Xdgno1Bs1H1ltOxQUWdS0+Hz7p5n3WDGiUsfXcejmatkPxngYs/y6WMPTzXTPvk9t1GBbWujDRZ/d7hkRDtzQW3phg17UVO2LA/TAKLG9KoxWG9kFRNzPIMEU2wIq0FKlgRyA6NCDInKYVq/r7V7+fkwC/h9BAjE4Cil008mldHkGw2foNT8n//gV7rBPb2A0+7u/O5/C016xAgxtJt6MFPhO3r8y8aDETPeWYAKvXSsp/eqAaOLMEbQ+pvnZx0L68OTsi/kIgMJRN5f+izxlNaWs0zXvcRsDrudC1mD12meW0VvUNoTRHD/wOUS/Dh+MQPqfyfKrgk0UgdBOQbhzpngVrbEHfK0yz7QK20aisHjDBZMkIfjoib3HgLPrtC0OUy/dpLjbreuD8IV4YAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"question\",\"restated_question\":\"Which devices in globex-002 are under memory pressure, meaning RAM utilisation is above the policy's ram_pressure threshold over the 30-day window, as flagged by the ram_pressure detector?\",\"assumptions\":[\"'Short on memory' means sustained high RAM utilisation (the ram_pressure definition), not a one-off spike in the latest snapshot.\",\"The ram_pressure detector applies the policy threshold itself and reports it, so a separate get_policy call isn't needed.\",\"The scope is all devices in globex-002.\"],\"steps\":[{\"tool\":\"run_insights\",\"purpose\":\"Run the ram_pressure detector to list devices with sustained high memory utilisation, with their owners and the threshold used.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 40,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 40,
+     "output_tokens": 527,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 527,
+   "output_tokens_details": {
+    "thinking_tokens": 252
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "key": "ad809446790e4e41e7c5d155",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: globex-002. Admin role: it_admin.\\n\\nRequest: Which devices currently fail the screen lock check?\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwafPsk741TLG1kda4Q",
+  "content": [
+   {
+    "text": "{\"intent\":\"question\",\"restated_question\":\"List the devices in globex-002 whose latest telemetry snapshot shows the screen lock compliance check as failing.\",\"assumptions\":[\"'Currently' means the latest snapshot for each device.\",\"'Screen lock check' is the compliance check covering screen lock or auto-lock, as defined in the organisation's policy.\",\"Devices with no recent snapshot are judged on their last reported snapshot. This is noted only if it affects the result.\"],\"steps\":[{\"tool\":\"query_devices\",\"purpose\":\"Filter devices whose latest snapshot includes the screen lock check among failing checks. Return device, owner, OS and model.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 45,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 45,
+     "output_tokens": 241,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 241,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

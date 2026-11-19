@@ -1,0 +1,76 @@
+{
+ "key": "12babd5ccf12fefa73cbe143",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin: eval@acme-001 (role it_admin).\\n\\nRequest: Give me a quick health summary of device 1LYSSFD074BB.\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"Summarise the current health of device 1LYSSFD074BB in or"
+ },
+ "response": {
+  "id": "msg_011ChCx25MyV8x9z8Q99WtM7",
+  "content": [
+   {
+    "id": "toolu_01DDenSRznefYqjmePszUM58",
+    "input": {
+     "device_id": "1LYSSFD074BB"
+    },
+    "name": "get_device",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_017RbYNNp73GLMSMDX2XpjZC",
+    "input": {
+     "device_id": "1LYSSFD074BB"
+    },
+    "name": "run_insights",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01Fv4f52t9GVr4UGtWQChX89",
+    "input": {},
+    "name": "get_policy",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 655,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 655,
+     "output_tokens": 138,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 138,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

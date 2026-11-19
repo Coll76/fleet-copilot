@@ -1,0 +1,54 @@
+{
+ "key": "5365dba20971a7dee9b16949",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Show me laptops failing high-severity compliance checks.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwSsWffpfEEZxnBz1cS",
+  "content": [
+   {
+    "signature": "CAQSpQcKEAgUGAI4AUIIdGhpbmtpbmcSDC74Y5ho+fIm8u1PuRoMny8MIu3A4elxkjgjIjBtsn9HYdDp1mJO99yKB6QDWZxv+KX8cvGxnIqgAGK5Drdsb14VpGFg0souj88f11AqwgaBvHllKmuC6OwU7G4sofy5QVkecuKfjhXsx1dfEU7HeVyZnXZYwbvBPaSvs9Qo1AV64LETZdNbmuCI4my9s1YwxK72JAfKfzzPlwJNbAENYQknmaXl74VdACQrMCA0l6sFmIByDc7NhX4IU/xLl8G6mO4j8pITlezqyLuCueL+kPrjVAXqLTkS5oPC2/219U3PMEp8GF9upEY2Ux/gDsTvanLJeLgJxdQhwnkf5869IW0RttI1u4mPT92N1aTwZrx1Jgv736LDvKMUxtBO45Xq8LVYuKjhrMYfFNzDoUXCQZigskYXLTYAWF/yBmn7wmLSroft8b4nmiHHz34qTXQwgXrn+oQnCXn6NuUs8v1GNYnTTXyw0eKWd6xq91+C4G1zDM96HGPw6gx7R38tTVI7DuziLSyvzyEP5Jo8Ioz9afxyWQwuUcuxROpfp9bltJFFww7Bok75z39w3ocx2B/4Y/ZR0uDPMXVpYLvEoRz6JmlQv11gToZlq0v9PbxbKFgTo4skhsWy4/2fskqB0X8JbnPjJWD+i61gBEe0o3CsuVY+Q6+pzbiJOgLLwMJKlB51bh1mR0qJdDb+aHayUcC5PiUiMGxLSYj+i7Ix5A7QFTgJJjgrOxtTZioUQ+HEqQ4PQqPvS5RZEuSkMf/nQwFbJeCXT+aAW52Zk+iFwck3+v1JE8NrwIvTpe53Qahq0PUY+pwEgyuFG58bZwWkH+TRst/e/qbURh7FSiqVQtKYv0dea4nr7l9axqED7XPdN5002KAfhOHBZDiP95JXBWEUlnFRpjeieBsVfCDH/Q1mAu1ooDRm/UBeOzbVN18JhDHOAaCLEel96uYTzyfqQVXgJEhU2Bz21MWLWfTBTZcObQRurryxpek5MgaDo/wspT2syU6stQotSSEYe1QmrnUWD6jyDQSkZuRrvxSbcre//TRZOfBP6V3/o1nFAtwwaziHjuZMhR6W+L9esq7FLzC6bs8tnKSz6/0F9Pk8Knhad6V29UdoPl13XlJ2eEpbK9r6w3TBdODWWburk27XMbFdXfeXG15UCvMc0xGmVAOfSEA2KOr+DtmBG8hIp/W5IvzWV7EPIx++tbLw444sQUHhvTkYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"question\",\"restated_question\":\"List all devices of class 'laptop' in acme-001 whose latest snapshot shows at least one failing compliance check classified as high severity under the organisation's policy, with each device's owner and the failing high-severity checks.\",\"assumptions\":[\"'Laptops' means devices whose class is laptop in telemetry.\",\"'High-severity' uses the severity levels defined in the org policy. If the policy has no severity levels, the answer will say so rather than invent them.\",\"'Failing' refers to the latest snapshot, not historical failures.\",\"The admin wants a listing only, not remediation.\"],\"steps\":[{\"tool\":\"get_policy\",\"purpose\":\"Identify which compliance checks the policy classifies as high severity.\"},{\"tool\":\"query_devices\",\"purpose\":\"Filter latest snapshots to class=laptop with failing checks among the high-severity set, returning device, owner and failing checks.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 48,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 48,
+     "output_tokens": 436,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 436,
+   "output_tokens_details": {
+    "thinking_tokens": 112
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

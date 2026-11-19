@@ -1,0 +1,62 @@
+{
+ "key": "4067f72cb2d5de3d7ee309d3",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"thresholds\\\": {\\\"disk_low_free_pct\\\": 10, \\\"disk_trend_horizon_days\\\": 30, \\\"disk_trend_min_points\\\": 7, \\\"ram_pressure_used_pct\\\": 80, \\\"ram_pressure_min_share\\\": 0.75, \\\"battery_rated_cycles\\\": 1000, \\\"battery_approaching_share\\\": 0.9, \\\"battery_fcc_decline_pct\\\": 3.0, \\"
+ },
+ "response": {
+  "id": "msg_011ChCwvX1QD3hqnTSsYkhcf",
+  "content": [
+   {
+    "id": "toolu_015bokmn7PhVQtYvs6TgjyB3",
+    "input": {
+     "employee_id": "emp-acme-1005",
+     "message": "Hi, your laptop (ThinkPad X1 Carbon, acme-thinkpad-8) is almost out of disk space: only 26.5 GB (2.6%) of 1024 GB is free. Free space has been dropping by about 5 GB per day, so at this rate the disk could be full in about 5 days. Please delete or move large files you no longer need (e.g. Downloads, old videos or installers) and empty the Recycle Bin. If you're not sure what is using the space, contact IT and we'll help.",
+     "evidence": [
+      "disk_low/8NM23J95R5I6",
+      "disk_trend/8NM23J95R5I6",
+      "8NM23J95R5I6/2026-06-12"
+     ]
+    },
+    "name": "notify_employee",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4539,
+   "inference_geo": "global",
+   "input_tokens": 2333,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 4539,
+     "input_tokens": 2333,
+     "output_tokens": 323,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 323,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

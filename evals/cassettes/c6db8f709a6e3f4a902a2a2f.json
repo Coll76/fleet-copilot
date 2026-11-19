@@ -1,0 +1,54 @@
+{
+ "key": "c6db8f709a6e3f4a902a2a2f",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Which devices at Acme are low on disk space?\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwRyhxN6DJKoDRoywLT",
+  "content": [
+   {
+    "signature": "CAQSgwkKEAgUGAI4AUIIdGhpbmtpbmcSDII7DDWfTLd8dfiPLRoMVTq7M1gYq8otCIMHIjBFWYiTP1d5Y+10cXS6F81FBmfqwJtFlhE69YTnzk1DOXOcPWBiCfvaVmmxPjN+bUIqoAhgfyAWKJKLsUZ893zUiXpDxgC9UTgdYpaVEYtP4i9zriP0JsIK316RnbaqX/1cQWO04Gt7+rPVvKgR+vEdI2+xRZbrIHzFMjwIieSmDmObf0njdS1VFhAi6ZhSc+x+lJTw5QXTiTuE55NTfRklwOrsXazjFjhRrwJ/OYPuPBfNaoQGmSicDi0dG4eoVpNyJhxwCo18z0+KmPhPAAnAVNQT54PYSdEdN6n2Ua1tVwf11Up9OhcEDG2BFSfY7CQfRu6211o/rNJKrYaL+m7eeyV4v1mnpnODPm0orh3rHCv1BY3BUYAg2S27WHAMP4sSI3JAjfGSs/P/0kqoT3MTkpFt5+C2GrXGaMZsqLVdlQSMxVXBihO3u5+yjVxppN7GnOeL8DD7HaZUhSXWriKioLbuc+lHy/LQ43fEuDjWIJb9aSbkdJCYf6Dit0omNsV3B9SK6eITOePR6SOP7XRrDS1hMDfjWX1f8kgokmxjIpP5CQ4A6HWZ/1aT4JQSwn9aIbGwRU1/ER6us3vsLc00owJmSkaD8ly7WW4XCcMqJFANX0dn6sI0OGbjJ8t2aJZUaKNlIzqz/ZXFCvPN7VgbzXYD6OrIdR3wOwhXs8LKDMpE+2XEfDjRBEiyKfnzpB4iwhD4to5Tow3slMnNmVosa9FtqO7o55Omywe4LV+KPh3g36GsdzfYvpKGWXhfiZVT0OrrQ2/DMJhhkwEUDRx7aG5FtI4smUyRZruNlJ9jBIIkq2EEAlN4R+7wvkhfGlnYeVZEqukGpvIv0QtRBakPPggFQBNC5xRGeSiqBCrK9I+ctawMU4tGAr1PphbAIUNTJI9jaP5mPDfdRP5bEnHtSHf1vk5Uxr5PuUwxpkOhWwM/XcSHZJOP2JXXWYYbyCUwnKjjAuHOutLXnnwFJbVwgZ+gCR6R1EzQGDmlIJsbudjCTyUC3BdhTXXcvGHgCL5BkPKDYaZdqLhGQkroMJFVqdmmNSw1+MkfnwYF27msOiVYW4A9VHOVQ8TtKIT3cF0SWaXu7V/Q98S39s0jdD4AatgL6Bx4wmvfbDfPBhL4ZvSLqI2O0bagpIJSgKNZOd95xlSwpXzWSKL1Zrbi1ZJilGF16gKgQzN/kFOKZTi76dTD6hlGCaVEM7pmzvqWNjvkbDp0O9NfomMtxfqZN4LP7zK5VwmQ16jHjP+fpCGi1qO+EGBPD7lCDa6P+h9VW4QBauF4fQIwVZsRUvkhYQ0M62gVguFmf1VcsPb+6il47SbGc1GzONlaIZ+vV+YpeNms6mqLSvYAVGfOcOG6/Eijxe5M8ZbvEqmVxUbIzC9miop76iDbQkcW6E0TkLC3HvnaY0Bsx0y2bAemkBNYMlID+XIKtIA9EY/QsCSneQWz2Q0rionMCk8Vd9p7yB3a9V7CWf4YAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"question\",\"restated_question\":\"Which devices in organisation acme-001 currently have free disk space below the policy's low-disk threshold, as of their latest telemetry snapshot?\",\"assumptions\":[\"'Low on disk space' means free disk is below the policy threshold used by the disk_low detector.\",\"Each device is judged on its latest snapshot only, not on a trend over the 30-day window.\",\"The scope is limited to organisation acme-001.\"],\"steps\":[{\"tool\":\"run_insights\",\"purpose\":\"Run the disk_low detector to list devices below the policy disk threshold, with their owner, current free-disk percentage and the threshold applied.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 45,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 45,
+     "output_tokens": 440,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 440,
+   "output_tokens_details": {
+    "thinking_tokens": 202
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

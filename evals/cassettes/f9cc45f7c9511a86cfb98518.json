@@ -1,0 +1,54 @@
+{
+ "key": "f9cc45f7c9511a86cfb98518",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"as_of\\\": \\\"latest snapshot of each device\\\", \\\"window\\\": [\\\"2026-05-14\\\", \\\"2026-06-12\\\"], \\\"devices\\\": 10, \\\"checks\\\": [{\\\"check_id\\\": \\\"disk_encryption\\\", \\\"severity\\\": \\\"high\\\", \\\"passing\\\": 10, \\\"failing\\\": 0, \\\"failing_devices\\\": []}, {\\\"check_id\\\": \\\"screen_lock\\\", \\"
+ },
+ "response": {
+  "id": "msg_011ChCwTWBYv5bJgkdeNFNvZ",
+  "content": [
+   {
+    "signature": "CAQSmAcKEAgUGAI4AUIIdGhpbmtpbmcSDL3o/k8syMJ688qVHhoMyzlcmsZhtX5cbfUvIjBnNgoiwA7GB2YPIyrBgac87WF8+gdlxod+sO88VGixVqUGAYPM8c6XYSST1jl/WuUqtQak3KfMzsFta8oYFrgKTD4LzcIhJRTDnrDamtAIbrOh8lQtaLxvak6QwBFD/WisQUdILmWbQ87UhkOzHqhruzhhuex+X215Y69j6rvGaJH+vxRFJPIaMdhqBq0SI6LTFJ9JsqdCrJLLjOdzWSuhp6uEeajSuu/TSH6ojUAMoopBFN4u7OBcB6IgD1Urs3UxpZrmydhdHRDL09Oc+PK8Na2VXWn0dnPctO/6DdJOGXlc3RAFnWwue79c8F6/dsvnrGOcl55a+M9yisiV2nnRwbA1MUnySKzDKVrMx/kKP54DXZ2unkFqGMMOfHdwf3J2jQvcmWblwJwmIeoqyDDSJztZGri0gH+ytIPohk0cGRJ32o0i1M+QzMawXKO/+x4P4Ev21+B+NLLETHWgEIwi/KGoLPhYRKC09S+q1cDoV5w+JK6KWqzx6hHVCn+8BtQdTf/Lp2vwOd43JFLoiMhVAN10P+levM6lNMRKbLU/kNbiqOFfxrbWIFjEBOfpUiztDkpT43H4radi6EGssd2POMvn2E5LyypP815cHM+jhScj0Ls/KioP25VwoLuviBGliQSejiTUUZcb0dvM+su29uRMVtSdZHaNqbqy9QFcfL0ek4uNYVN7Mwmi98mWIi61NiirI+ufWbHLMt0ya+56k7N1jHen76GDKsmKHNR8x1/LjbKxKPrqS/7NfCNnQmLP0xBo7kgww2KoAM9q6KnKkv0/5r5Rj8F1SPtT84FEwDPerbEk/Jmnh9IoLuBEn/FkrHE4kmHL5mOX2DJcr0J3HAjmE/gYrFZEiLqaeXI6WCCu+kY6UUoAIr7tMJbGA926LuqM4hHSB2gTcRdy5nx70IDgLpPBAfDb0hz4pcO03+tSS5C76yE+aZCrlWL5Aet6/Ap5hdEfWFeHUq0Bl3+mrCJTtYLtqzpuySV3rIdWonQ2yAkG07GQl35SF5ziNOvxY4peq1PwvRBM2f4kWGXQnVS+LuyDSozDKMLxzmSWATDwllrYWLIfc0YuM1YvGMWd51kYS2Mm9D1jZBrBdlc3yblmv+bQAE1Zvadza50jNpU1Z3adQ4X4L/H8bn92FY28A3xyb9t1XRgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "No laptops are failing a high-severity compliance check on their latest snapshot. The only high-severity check is `disk_encryption`, and it currently passes on all 10 devices.\n\n**Evidence**\n- I filtered for laptops failing at least one high-severity check, and nothing matched. All the failing checks in your organisation right now are medium severity (14 failures).\n- `disk_encryption` is the only check rated high severity, and it is failing on 0 devices. It was also failing on 0 devices on both the first day (2026-05-14) and the last day (2026-06-12) of the 30-day window.\n- Two medium-severity checks are failing. You didn't ask about these, but they're the active issues:\n  - `screen_lock` is failing on 5 devices, up from 0 at the start of the window. That's a new and growing problem [1LYSSFD074BB/2026-06-12, 8NM23J95R5I6/2026-06-12, DLT35MHGTH2D/2026-06-12, DSYPSES7SKBB/2026-06-12, MT7PJB7N5LRE/2026-06-12].\n  - `os_up_to_date` is failing on 9 devices, the same number as at the start of the window [1LYSSFD074BB/2026-06-12, 7VP16KHV88LM/2026-06-12, 8NM23J95R5I6/2026-06-12, 9MXJVZ1I0DKA/2026-06-12, DSYPSES7SKBB/2026-06-12, M4XVHUV1MEPZ/2026-06-12, MT7PJB7N5LRE/2026-06-12, Q3VUITEGQ400/2026-06-12, XSU9UUDGU6AC/2026-06-12].\n\n**Caveats**\n- The severity levels come from the compliance data, not your organisation's policy. The policy sets no severity levels for compliance checks; it only rates risky software (for example, uTorrent is rated high), and that's separate from compliance checks.\n- This only looks at each device's latest snapshot. I didn't check whether any laptops failed high-severity checks earlier in the window.\n- I didn't sort the medium-severity failures into laptops and desktops. I can do that if you'd like.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 2244,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 2244,
+     "output_tokens": 824,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 824,
+   "output_tokens_details": {
+    "thinking_tokens": 93
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

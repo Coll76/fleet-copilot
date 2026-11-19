@@ -1,0 +1,54 @@
+{
+ "key": "79a26253670993802bc5582a",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Give me a quick health summary of device 1LYSSFD074BB.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCx1Y82a6LaYKW4NMJv9",
+  "content": [
+   {
+    "signature": "CAQSugcKEAgUGAI4AUIIdGhpbmtpbmcSDBql5W/bPdxBxcPjUxoMj0xFFOFsGFMhqP6UIjAfTwaZae1iZwm6Wx2iQlIsNso6BSrc+/IPZ7hfiCIs/7Om3obXO0pxwnfB0tPHDQsq1wbQP92drvkRf9lId3LsXNAXQ5odVM5/Ytqq5lXn0GELXPo+pOeD9qNoYHPxzXWx2HR0E0kBZw4PxexvJqU/k+1uF5wW2U+IEaibTE+L4U2YzclbWg165JoDHA9C7HN9l6jhnfoR0kn2wlj8mPPGIV7LLdKGNBnbeo9Yl88Or6kbAc+h8Ilfy9av9zDjCmsNr5U9UjOqk9RcrkiiQBLFRSARMTXSLcTAtNy0Jvj6XosO/Bqq6q/7QfKw6uVTRUgfjVv3IHa5BtyyJQjlr5U4ERLzs8pgvcCfawZ3jJCXw+F4wzb4aT3VctE+eRupq7xwnZ2fdzt/OMMJ5ENeBchDEpQ0aaxQouvdJ7KZ6mG+AQS4ZoDYmsgsfzZJsIoq02Mu4LQ9uikfTTnOW7Hj3+e0PUuoHESJhYZITIAxHMJ8QaEX9YRhymF05p2m/T12wDocfBd9ylqoKeM3bfKiGa8L5fG6JLfBeTKUUp8ZbPkCJUEKHCt0yG5qgdnJjYar7diBtJ/y4FCr4mdhJ2OHuc8TupXEu8KRYDsNCSuDpjZVUSraBG6xqVPBnLic8qU9LYzNkyldRJQcE4NraALunhVJsugK9UlovLKyvgD5ajIQpTgB2w0wPm1WesHTAOG7Qe+ut45PwRkR/ynmxzyyPYlIdRYt/XvSD+QIy/WPgfGgJdok5Fg/3+wTzfL1fYOejIWsSUe5vBb/N3ADBbdxmLxGMc+UDIFPzRvGgTZ/oP7Hs+ndWPFoTq31ayBlsTRk3uYag61ERS1tY07tllX28Kj7S0/8AP7WrjJaKsbgK8MqWojtaCj6s7G9jDSd99e9tR99aMfpaj/A2lwX0Q5o0rceORqvoUx4p2KFlM1Vx9xt14WxjcEwSRtERxXLc6606rnAPkDb3aK2ad523g2jaDloeQ9I2xXoEXRvjGxZFXGu4tBkgTLiHOp7QK9Z7sqgfFPIR+adngb4oCuqF8T89CITMPw8OxTgHlfs/wzEo1D6383fSbrSe67jdAxi0T0uReIpyOf9ilUAlxmd5NQ8EE9PoeZAUL5bYdj6Csli9yRXcq3W8eomWMKN2Lner8Unc/ubqWwQ5JxSjMDwhb76xnOEzXhU+AOw/73rEGZyLREdWg+bpPZ5YpUU11IYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"question\",\"restated_question\":\"Summarise the current health of device 1LYSSFD074BB in organisation acme-001. Cover its owner, OS and model, disk and memory usage, battery health, failing compliance checks, risky software and telemetry freshness. Also list any insight-detector findings for this device, with each one judged against the organisation's policy thresholds.\",\"assumptions\":[\"'Quick health summary' means the device's latest snapshot plus any active detector findings, not a full 30-day metric history.\",\"Device identifier 1LYSSFD074BB is the device serial/ID within acme-001.\",\"'Healthy' or 'unhealthy' for each metric is judged against the thresholds in the organisation policy, as applied by run_insights.\",\"No actions are wanted; this is informational only.\"],\"steps\":[{\"tool\":\"get_device\",\"purpose\":\"Fetch the latest snapshot for 1LYSSFD074BB: owner, OS version, model, disk %, memory %, battery, failing checks, installed software and last check-in.\"},{\"tool\":\"run_insights\",\"purpose\":\"Run the detectors scoped to 1LYSSFD074BB: disk_low, disk_trend, ram_pressure, battery_eol, compliance_drift, risky_software and telemetry_gap. This flags issues against policy thresholds and covers trends without manual arithmetic.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 53,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 53,
+     "output_tokens": 597,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 597,
+   "output_tokens_details": {
+    "thinking_tokens": 124
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

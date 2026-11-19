@@ -1,0 +1,67 @@
+{
+ "key": "dfbd773bd0106167edf234e9",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin: eval@acme-001 (role it_admin).\\n\\nRequest: Is our compliance getting better or worse over the month?\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"Over the 30-day telemetry window for acme-001, has the"
+ },
+ "response": {
+  "id": "msg_011ChCwg8XAmxqbGYx56rNkH",
+  "content": [
+   {
+    "id": "toolu_01XmeUUAAmnZNfsSRmmz9FQs",
+    "input": {},
+    "name": "compliance_overview",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01L4Po8XyeSqecQgTmzEqBSt",
+    "input": {
+     "kinds": [
+      "compliance_drift"
+     ]
+    },
+    "name": "run_insights",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 503,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 503,
+     "output_tokens": 84,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 84,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

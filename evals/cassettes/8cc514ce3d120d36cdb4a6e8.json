@@ -1,0 +1,54 @@
+{
+ "key": "8cc514ce3d120d36cdb4a6e8",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: initech-003. Admin role: it_admin.\\n\\nRequest: Please order more RAM for I3JLKILKQTAC.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwpDiRfWjwywBC8oWYG",
+  "content": [
+   {
+    "signature": "CAQS0wgKEAgUGAI4AUIIdGhpbmtpbmcSDKtJ0sgYU7w/1p39zBoM2zLlJqtBlyfO3O92IjAVgypKIhZAHRbSTQC5YLCNOOwyq1EyPM2UkuhxDbqzvbH+v0AuudZQssvkYzPpXFcq8AdqRE7C4n2cLv9R0t0ZepDPzDDibZ+7sllKM8p9g2t+3tTjzdZgEWDvcO+w7AByt4bkF3Wz7PZAsZ4mORc9MQ+TuN7J4dkanTwxRgA/jrVrMqhX2hZDj9ZQu3luWA9YC5w08OWgsQsjiiioLz2clrn9cCHEtqcqKo/4Ny2F3wfWJIDNcZkicHuDV8aDgdg0YeD/GvcETD/09yAR6IE9tEMb4/m7b8W/+/HCv1yExd1du+BPxIFWqJv9WWG8AkzQW7AY4WF8/TUFUi37w/tAs16rYVr+mowTOQ8Q4eTDH4XTOboivecNdB55IoP7/WgpLMYYro7DpCmEDgsEHZcOkEnmiu56HtrLmTsuM5kOB1dTY7JInh/u+Blyh3QHJaaWtqAnUEk12311rZSf+rjgU95WftKwzPi5Q8I16wUVRxvqGz4tTclQD6yiCRGsRuYY51hRbL4mWYG+XfQ7oy9DvkL7a+Wf/oCZVRMki+DnyrBbxueLldL4c+8ADC4Rj1tjluWlQFFeatOnAZT6KgfazaxrQmJ5eL80QBuAmoUYPkxjWczHdmgETacjpbYZNG2OIpjN470wRLiXVPmiOV1WdNIvlXYH+Okaecd96EsAzOvuNLxtn4IKK0EcNLuL9/pxd/dez+HTx/Fdkdjl3gHbMDGZgUpJbBIZ5qFBG9XEVgGvx7LuVgf+q7L2AFT5VzNOaRb7us00645+49WJ/vqgMc2n24swq/EFhjBxjaQsP2BYczKq15S/k9OElvRl5XEVhvG4Y82y4sRfXlwb3bXwsu1Eg6lgbB+1KufxZpQFvcXa9T5+62Kh8nbZ0VQocKJDYTRcDgSuKrkwKlueL39EeGiat3gGocBF8+ZdqsWyieDwIWVPNa8b+q/40AO7sofJtrDILY6yDvZknhwZpVrWnaUo61KcDE46McA2f1UkRQp+F9AR5KAvm2/PcZKvgCYyHL3I1fGmcaG6vrvXF59lEhqd+S48q3MUJOx7edG8yQSg9VZn8skYDAeOWomeca1zTSZCg6SvWcUhZl0eMh/rbzeZE3g0fBgKeNv3erMW/n5cat0b9XHNakbd1Yt12UTcpk8PafvedHJ0Pwelz+7PCKkihyjdc+PPJ6xkPwvVSPEPqcs7nh5PH6/ptKu8/0n/RhDv8/K1/HFp4PJKrI9/vwyF13RV9CR6AdWwzuYqbMX/thoMWuOKsfzALWyQZt4TNoB42iztFS7uVxUgkSXPTrnOJbMlb1R5uLMnzirEAC1R6ZBfHbsvZWGy3njUPNdSCvrLnMOJo90W+vGkUWFODNJtKRmRlq+SkmGxK+hchopPMYKVSeHZ+x0KEuWCp7LggT8YAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"action\",\"restated_question\":\"Propose a RAM upgrade order for device I3JLKILKQTAC in organisation initech-003. The order goes to a human for approval. First confirm the device exists and check its current memory configuration and usage.\",\"assumptions\":[\"I3JLKILKQTAC is a device identifier within initech-003.\",\"'Order more RAM' means a memory upgrade order through create_upgrade_order. The order is only proposed for human approval, not executed.\",\"The admin has already decided to upgrade, so the order is proposed whether or not RAM pressure is detected. Memory usage is reported as context only.\"],\"steps\":[{\"tool\":\"get_device\",\"purpose\":\"Confirm I3JLKILKQTAC exists in initech-003. Retrieve its model, owner, installed RAM and current memory usage, to include in the order and as context.\"},{\"tool\":\"create_upgrade_order\",\"purpose\":\"Propose a RAM upgrade order for I3JLKILKQTAC, with the device details attached, for human approval.\"}],\"may_propose_actions\":true,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 50,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 50,
+     "output_tokens": 551,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 551,
+   "output_tokens_details": {
+    "thinking_tokens": 188
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

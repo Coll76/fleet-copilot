@@ -1,0 +1,68 @@
+{
+ "key": "30a70e9baea3f8c9ec68198e",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"snapshot_id\\\": \\\"I3JLKILKQTAC/2026-06-12\\\", \\\"device_id\\\": \\\"I3JLKILKQTAC\\\", \\\"employee_id\\\": \\\"emp-initech-1001\\\", \\\"collected_at\\\": \\\"2026-06-12T10:57:00Z\\\", \\\"hostname\\\": \\\"initech-mac-3\\\", \\\"model\\\": \\\"Mac mini\\\", \\\"device_class\\\": \\\"desktop\\\", \\\"os\\\": \\\"macOS 15.3\\\", "
+ },
+ "response": {
+  "id": "msg_011ChCwpufGPWxaqSj5ELGgd",
+  "content": [
+   {
+    "signature": "CAQS7AUKEAgUGAI4AUIIdGhpbmtpbmcSDC9iBxj9jUmWn6oEWhoMbH4nbcLTdZMb9YZ+IjA71MRu92xv7KpJSLnuK68xZl/8/CINH3w7GH/A32ZwAnHiyW6sYigwcbK2gT1uMEQqiQVwiyC1CB7zvnMOBi/ubr+5oPeRdUyymB4tjGohiXl8+GaTTstB0Wy9vFjA64jTeus9b/3F+vTjehR6/KggXo04bdS1Y5x+aUkZV6EGI11Kag+bvcj8HfNKAsixmA/HZ0l4vqCfoNB+0W2dLvrf/WZZgbxTxZyY6pXs9piGpebtannhzjU5FP78KXA+8rG82ddu8RU359wfGGXKzDnYpQwIJuXLfoVzW0ptUP10rS+JchYze67HdaOLprOZ3a984IQJO8ghAH38oIF83aQSg//aP6J8vvZuuSmLCsi1CEBVWkEXKHNk5XmLaNz+Sbay7pLeoRV8a38FuFM7cn1UY3256qaB/waoa+ED04en5bKLrFE7sL1ZhVcM7x/9Ess91T/poQ4LQj8kyO4MDMetR/4pTlGgtErjtST6gIkqy/2M56ItfcZ/gALBF8E/cMpQ5KCyOak7a9+l088MGzF6FJoBo+5mjPIt+3xnzFxBkRgdNhBJU5pysBh+taele0jdSV111pzOl5gOdV2d3zEMyKtLetk5fYJGX1nnclkcVMOJAL/VJpTGSJocHwzJpKE+dGehWgUvm6GWwPgWqStyi6CLa25JVKKl6VXlamCVwlgnI0OAktGyhKmMfg1n2VChxfMV9JphP2ysaMcum0ATeiN1THDmenYMKGPddnR6Xo/ZcNFw5WshGzKFRTiEBdTckbSXB8iNuhBsHBNjzghrZtNQsLdo43hA1r0LHsO//rVWIZkISo/lZejFrtCtcGRoAedEPJOIDa3nZZNmjniZQqP0KuVkv0hyHrG/6gBxtwcy9tUcdtRvCQWtZWO8apg+pWdP1vYHahoOUWYxe1jdQnGxwIgAVxGZwp8mGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01Jc1HNaNSmECSharF5vueHn",
+    "input": {
+     "device_id": "I3JLKILKQTAC",
+     "component": "ram",
+     "spec": "16 GB",
+     "justification": "Mac mini with 8 GB RAM was at or above 80% memory use in 30 of 30 snapshots (mean 91.8%, max 98.4%); upgrade to 16 GB requested by admin.",
+     "evidence": [
+      "ram_pressure/I3JLKILKQTAC",
+      "I3JLKILKQTAC/2026-06-12"
+     ]
+    },
+    "name": "create_upgrade_order",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4539,
+   "inference_geo": "global",
+   "input_tokens": 2458,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 4539,
+     "input_tokens": 2458,
+     "output_tokens": 297,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 297,
+   "output_tokens_details": {
+    "thinking_tokens": 33
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "key": "af4d25bb2cb3cfbd1165f3cf",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"snapshot_id\\\": \\\"7VP16KHV88LM/2026-06-12\\\", \\\"device_id\\\": \\\"7VP16KHV88LM\\\", \\\"employee_id\\\": \\\"emp-acme-1000\\\", \\\"collected_at\\\": \\\"2026-06-12T10:41:00Z\\\", \\\"hostname\\\": \\\"acme-macbook-1\\\", \\\"model\\\": \\\"MacBook Pro\\\", \\\"device_class\\\": \\\"laptop\\\", \\\"os\\\": \\\"macOS 13.6\\\", "
+ },
+ "response": {
+  "id": "msg_011ChCwrndPi4aoTybYNoJRD",
+  "content": [
+   {
+    "signature": "CAQSowkKEAgUGAI4AUIIdGhpbmtpbmcSDCw/RAVuwT2ukE5RiBoM86VZaw1MyDpvtFmkIjDyvLqtKVmBGrxwF5+n/FeMNl0+zcKKnvSEMi4vKoINJbMW9bjQUgxylWCExVcp3VkqwAhxfHqruM4EzHC7fqpD2bDCK+7f7EvZEATVKhvHMUs1Fz47rJjcKGjZ7zFijZ1dOMBSdL1v+/6xObwRXGJnuzy6jiEXlzoS1kOGe+nOJKaL6zPG9FNkSMQ5I0Z+6dTdKprCGE5UwM3xvua2R7gFhaR++QDK9X0c5HfRmgRfv9ke/hPxJ6m9u42zuO2kTV5hOJ3gquVh0u47e5z4/vEzX7DT1S3htZx5jw/3RKy6poIIK2eI6xrCgyJN3vIHnNrS1reypNBMK06GNSZAAnCbWzwS01zQO5dW98RNJphsOjJzOtFcprwC1gRmLyp3WGTfDuTdnYqrxXyTiwZxDmBr+yVjfgv1y2vYbLXcmqlL321JAhGL6Volsf/zV4fgf5wf2HvM0XG/7Py5RCx59fKmb+zl4JzFLiX1VrHTxVF7nOovOo5rCjZ49cVEl/DBi0W+uN0GOIbRNH/ZWl5pqtreOhlkFVUxFNOk+G0B7OoCgpGyKTLxBog/w+YMYVMx72VvEXIuTUrqf8e7G2x/EHhrZCjQHNMh2NkRWMgOM7fVs3Q8wba6X0DVTo4Zflbla7uMMeRBCG2tb8GpiWoQ8lhDjaQvTt4+eHZ2v4pZH8MmjK1zrx4ICY2PGmUqwgbR3TfsDrVNjYJDhp0KUwngf86+hvIonAzj2mih44VAgS279oufvbHM/gIUGXbA2uGI9lJIXUfDZxZcEZpGEat7PoKwHy5k6KshySeQFerY53tmxc79r3zHsj9eelfaHW22l1A4VcOUItX3RQrnsdg2j2Rl73++15o1aFCYRxZitdEpY/X7NiAXa2Eq+l5XjTkYP1enJEgtahi7NfS476Mx7zQSHcSEV8jt0DQMZPpLNu5prUBn6r9ilgdvoo2uUYj1M2YZCWb91Y4LYh2nan/ff5fQlJqCLjdEzVuXiqG/WWAdlUD/EwZhOPvemEFBP691MvJnqv5E0kJ1XUVBgR1ueH2nc9ymDsKSVW876FXK2uwim5PxD6Z2ywyh4QTe2Rr3Ox6sXaRiYGhS/wQcbl0T1l36/AQbulrgWFokfts/cEw//vqusX3rAQOUCZ9L4367tDvD0A1zAHEG77F1kZJk2a1/zRsvIEcrUWmBz+fEJFoliAMZyR5fqFR1aLDbfuwX0wHVZD+Dv9EdDwsgICG1JfTf8aGkYYt/HCIsKKbEtCUSnxTZFVyoRyqI59HTTjRYtAlbQsNStLm6MOYe/mqwfr4H3NuabmmWFQsnEbOdA9NuZUK/V+FxXQ6KSX38N8NSdGdEitZ7z7S68uJqRrKH4a9QdDJpKRxhZyRVLr2A48FBKxcB1cHwBCjXVBcQXfno5KOvgsyy5Ko8MbOOJuOosxDUMJML8xAwmq4pJz9oaLe+yE1XCMIJ1v3jtimGx0VDg+GM6nNqah/HPrQXyi6YnRQ5PHgpSo5jk9oVW8A3YOueFOXmIRgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_014pA5s99LKoC1gVuxfYBsre",
+    "input": {
+     "device_id": "7VP16KHV88LM",
+     "component": "battery",
+     "spec": "OEM replacement",
+     "justification": "Battery has reported 'Service Recommended' since 2026-05-30, is at 1049 cycles against a 1000-cycle rating, and full-charge capacity fell 4.2%. No other hardware findings, so a battery swap fixes the problem without replacing the whole device.",
+     "evidence": [
+      "battery_eol/7VP16KHV88LM",
+      "7VP16KHV88LM/2026-05-30",
+      "7VP16KHV88LM/2026-06-12"
+     ]
+    },
+    "name": "create_upgrade_order",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4539,
+   "inference_geo": "global",
+   "input_tokens": 2571,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 4539,
+     "input_tokens": 2571,
+     "output_tokens": 471,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 471,
+   "output_tokens_details": {
+    "thinking_tokens": 168
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

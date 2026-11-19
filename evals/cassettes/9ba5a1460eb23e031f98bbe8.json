@@ -1,0 +1,54 @@
+{
+ "key": "9ba5a1460eb23e031f98bbe8",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"as_of\\\": \\\"latest snapshot of each device\\\", \\\"filters_applied\\\": {\\\"os_name\\\": \\\"macOS\\\", \\\"os_version_below\\\": \\\"15\\\"}, \\\"devices_considered\\\": 10, \\\"match_count\\\": 4, \\\"matches\\\": [{\\\"device_id\\\": \\\"1LYSSFD074BB\\\", \\\"snapshot_id\\\": \\\"1LYSSFD074BB/2026-06-12\\\", \\\"employe"
+ },
+ "response": {
+  "id": "msg_011ChCwV73Zs3gKzMYUoanKY",
+  "content": [
+   {
+    "signature": "CAQSxgUKEAgUGAI4AUIIdGhpbmtpbmcSDFCkmq2YB+FL6W3pLRoMQ56OO38+am2gfjsjIjDx2ogf9Z5Wttu0bJ7GeoWpxTDqZ2iBXEbW5vXojR5MIVONuwvLAomR/2HdDksaHbkq4wT9/8+U9GuC5JRRHhPGltX6WYYiE1n20gNNNn86ZF4By4GeyeFFCR9oUzPD5Q/9XeOWAivg5tMth3WTMcMrISHPawF/Wzbx3lu2HOS1DatHnax23i+fVbJA4IAveZ/NmOUbnMgt1RU8/mrvGVtMjmC4UX+g188O91B0616FNqjQh618tZJwbB2pQxoEsMQQJInXmwvmQte7lCU2KIbKCXTmAklsDR/bryxXdXR6zSds2OhE9Fifdr84iOyzVosTWkoUi0QhyW0cz1C70iWtsqobUVKWGB+6donv5oDip42Qn1o/44nA9MCvPKLmo/Wt72+ZbdlRBDIHlBTK6YuQEsLxssO+ubF6bKg3F/cYtUMwbJGCS8BzokyGmqqa8nvSramgtJUAAj/sEhVxrG2L//OQNAMTFg/0AEfnZUB0GnNW49oueB5oe8Mk4Z0KbXZqAY809Klkgj6I8gmtkuJK/n1PRrl8ohdUk8+OGDZS1XUyghDFgizznyvzGMUbXCKM/Npbjp7ti3oydyT4N9qZUwdre7lCpBODxx6I7XXC8b0Wotk4s2M0KH5yxzeiZIEB7aIxHukAU4gV9d7KJMHOT4DoaPAYGAUv29te0XUVKuBOWZpiA9vgmXFJ6MXjERdvA+8f+hlc8QtO5tpYUiDyByE8D5ggfPODI0gWX42vHIyBGnT4f2w8SGmGhmBvURu3DQj8AAonz5uiR0+9KRNRt4aWUAKflYNNu0IoEeG0hXlHQNKc6suHuAPG+IQqDdSCqVFccKri5ZqXw9x07NiKKeg+AvdjKH1k5IWGeHF/yM17GmUPWhgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "**4 devices** in acme-001 are running a macOS version older than 15, based on each device's latest snapshot. That's 4 of the 10 devices the query checked [1LYSSFD074BB/2026-06-12, 7VP16KHV88LM/2026-06-12, MT7PJB7N5LRE/2026-06-12, XSU9UUDGU6AC/2026-06-12].\n\n**Evidence**\n- **7VP16KHV88LM** (MacBook Pro, emp-acme-1000) is on macOS 13.6, the oldest version in the fleet. It is failing the os_up_to_date check, and its battery condition is \"Service Recommended\" at 1049 cycles [7VP16KHV88LM/2026-06-12].\n- **1LYSSFD074BB** (MacBook Pro, emp-acme-1001) is on macOS 14.5. It is failing the screen_lock and os_up_to_date checks [1LYSSFD074BB/2026-06-12].\n- **XSU9UUDGU6AC** (MacBook Pro, emp-acme-1002) is on macOS 14.5. It is failing the os_up_to_date check [XSU9UUDGU6AC/2026-06-12].\n- **MT7PJB7N5LRE** (MacBook Pro, emp-acme-1003) is on macOS 14.5. It is failing the screen_lock and os_up_to_date checks, and has only 2.0% (10.2 GB) of disk space free [MT7PJB7N5LRE/2026-06-12].\n\n**Caveats**\n- \"Older than macOS 15\" means the OS major version in the latest snapshot is below 15. Only macOS devices were compared. Any devices on other operating systems were left out of the count, not counted as older.\n- MT7PJB7N5LRE has very little free space (2.0%), which could get in the way of upgrading it. I didn't check this against the \"low disk\" threshold in the policy.\n- MT7PJB7N5LRE's latest snapshot has no battery data. That's a gap in data collection, not a fact about its hardware.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 1480,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 1480,
+     "output_tokens": 739,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 739,
+   "output_tokens_details": {
+    "thinking_tokens": 47
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}
