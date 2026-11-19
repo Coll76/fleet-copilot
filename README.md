@@ -4,7 +4,7 @@ An agent that helps IT admins understand and act on device telemetry across a mu
 
 Ask it which laptops are low on disk, which batteries are wearing out, or whether compliance is slipping, and it answers with citations to the exact snapshots it read. When something needs doing, it drafts the action (an upgrade order, a remediation ticket, a replacement flag or a note to the employee) and waits for a person to approve it.
 
-Written for Rayda's Senior Agentic AI Engineer take-home. Python 3.12, LangGraph and Claude.
+Built with Python 3.12, LangGraph and Claude as a take-home exercise for Rayda.
 
 ```console
 $ uv run fleet-copilot ask --tenant acme-001 "Which devices at Acme are low on disk space?"
