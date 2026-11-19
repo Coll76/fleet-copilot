@@ -38,7 +38,7 @@ risky_software:
     reason: Third-party system cleaner with broad disk permissions. Usually unnecessary on managed devices.
 
 # Which components can be upgraded in the field, by model. Apple Silicon Macs have RAM and SSD on
-# the board. ThinkPad X1 Carbon Gen 11 (21CB) has soldered RAM and an M.2 SSD. Dell XPS 15 9530 has
+# the board. ThinkPad X1 Carbon Gen 10 (21CB) has soldered RAM and an M.2 SSD. Dell XPS 15 9530 has
 # SO-DIMM RAM and an M.2 SSD. Unknown models default to "not upgradeable" so the agent never orders
 # a part that cannot be fitted.
 hardware:
