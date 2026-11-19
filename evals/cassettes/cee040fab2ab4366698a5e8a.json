@@ -1,0 +1,67 @@
+{
+ "key": "cee040fab2ab4366698a5e8a",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin: eval@acme-001 (role it_admin).\\n\\nRequest: Which batteries are approaching end-of-life?\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"Which devices in acme-001 have batteries approaching end-of-life, a"
+ },
+ "response": {
+  "id": "msg_011ChCwbh86KXtBVbHKY2KUQ",
+  "content": [
+   {
+    "id": "toolu_01FJc9S9cGtFarrL3qALtoMb",
+    "input": {},
+    "name": "get_policy",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01VwvDjX8JN8V1a6Z2BrThv5",
+    "input": {
+     "kinds": [
+      "battery_eol"
+     ]
+    },
+    "name": "run_insights",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 487,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 487,
+     "output_tokens": 81,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 81,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "key": "e1c5fe4fcbf2d7cee1491039",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin: eval@acme-001 (role viewer).\\n\\nRequest: Order a 2 TB SSD for 8NM23J95R5I6.\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"Propose an upgrade order for a 2 TB SSD for device 8NM23J95R5I6 in organisation"
+ },
+ "response": {
+  "id": "msg_011ChCwzZSrjCj2JTfvZSina",
+  "content": [
+   {
+    "signature": "CAQSlgYKEAgUGAI4AUIIdGhpbmtpbmcSDH+eOKzpwP90ed3SxxoMns06ggCxTco7qgIsIjCQtVYa4wTGktopNX4a4ZKx/ZSNyyM8U2U1rTFXMI8CLI1ZfSL56heq5cLI1rkeOVoqswWTYOB/8L85W1wfTq51AC8KNkG/djPo/oBPPEZQJ80ApJOEyfpSH0yrRGoykWhFyPgV9zxYe5gl8YwZTMRmj9VzMhA8W0lQpLBTwPNMOOcO/Oufho9GA409PxcOFFJpI/u2aTQX5B5EC3gSB++vx/GF2xoh/Nj1iSTp47c7LDovED0L3ClJiKsvA37nA8CrAdAEpboz+gRMkjRt2XRIZDpviqrBz84MZ0vQET2otnue512Kc55cTpIkdoeHOqsFl7y4BVNqjQy1grc9lq4J5KBiDXs/id6ELGvTz1pi8QBzcdnU47jNUR9B7dWtCwURFbN9ftOcCtg8312zfJ4D1YjPW1PJde1gdM9+BxDP5lqqR6Z+U2iwhbrm1FKKXBmhDAVUqhgyzWgRnmEr+xQL2s20Vl0pUfVvpBr0G8q1tnPmHoLv0HE89smwhEImWVk6iYYxzeJNWeFlc2C1zU2qgzT9CUNnQssf/7AjllvuI7iTiSbyzRLlazK59lgDJQvSz7xG8He/dQJuHqK35Oe6bc1gxP7OzmqAaEbWWkGX1n5gc0x2/WVuJxwS1kIrW3ybQCi02zVs+JAgMqvzkpWFIVuzenzAKjORTvbE6a0dPv7vFMnqQ0PwAAMAruQXZ0NvjIsMNk0dIOVJzinPCXrmYI0Is3V+rPo/wukwlBsoEEbZdPc6NBdv7PjtGtOxgltKToExflvsw8rA/kKDE0gvo5s9c7/Bxog7NB+4pxeTvPmaCdOhrvmFOHIZ8g0bupKTznE8Tz2GI3KMtzvMA9/Saw7CFkHOOwxc+AsEjpKrAJCQdou64qZRpsP+LGSE8jaIKoY+7mCl7BVleLmGUj4qeuWs/bF7Ek0PloRurejvcmGfAZHWStpSAUhoE3YfCB9Fd8/UVsXgZwxLKNnps4HlHROmdQbdGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01QJn6PnvdfuZ9Zn1fXQFM2u",
+    "input": {
+     "device_id": "8NM23J95R5I6"
+    },
+    "name": "get_device",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01TkfMy6HAA2mA5zviga8GN9",
+    "input": {
+     "device_id": "8NM23J95R5I6",
+     "kinds": [
+      "disk_low",
+      "disk_trend"
+     ]
+    },
+    "name": "run_insights",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01Ubhj12XMyBZ4fXe2nXQ71f",
+    "input": {},
+    "name": "get_policy",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 591,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 591,
+     "output_tokens": 236,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 236,
+   "output_tokens_details": {
+    "thinking_tokens": 61
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "key": "934995e54181cadc6cbcce11",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: initech-003. Admin: eval@initech-003 (role it_admin).\\n\\nRequest: Which devices are consistently constrained by RAM?\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"Which devices in initech-003 show sustained RAM pressur"
+ },
+ "response": {
+  "id": "msg_011ChCweyJkoWs6971XXgHNT",
+  "content": [
+   {
+    "id": "toolu_01GmZvVUo9UwpwVh6tFfcE1t",
+    "input": {
+     "kinds": [
+      "ram_pressure"
+     ]
+    },
+    "name": "run_insights",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_018ZHqpVozXZWz33YCLfhqw6",
+    "input": {},
+    "name": "get_policy",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 525,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 525,
+     "output_tokens": 82,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 82,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

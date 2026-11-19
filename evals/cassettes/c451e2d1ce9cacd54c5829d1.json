@@ -1,0 +1,49 @@
+{
+ "key": "c451e2d1ce9cacd54c5829d1",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"snapshot_id\\\": \\\"DLT35MHGTH2D/2026-06-12\\\", \\\"device_id\\\": \\\"DLT35MHGTH2D\\\", \\\"employee_id\\\": \\\"emp-acme-1003\\\", \\\"collected_at\\\": \\\"2026-06-12T09:36:00Z\\\", \\\"hostname\\\": \\\"acme-mac-5\\\", \\\"model\\\": \\\"Mac mini\\\", \\\"device_class\\\": \\\"desktop\\\", \\\"os\\\": \\\"macOS 15.4\\\", \\\"ram_"
+ },
+ "response": {
+  "id": "msg_011ChCwa4AK3ji2hsV97o42m",
+  "content": [
+   {
+    "text": "There's no battery health to report for DLT35MHGTH2D because it's a Mac mini, which is a desktop and runs without a battery [DLT35MHGTH2D/2026-06-12].\n\n**Evidence**\n- Its latest snapshot (collected 2026-06-12) lists the model as \"Mac mini\" and the device class as \"desktop\" [DLT35MHGTH2D/2026-06-12].\n- The snapshot has no battery data (`battery: null`), and the device isn't marked as a laptop with missing battery data (`battery_missing_on_laptop: false`), so this isn't a reporting gap [DLT35MHGTH2D/2026-06-12].\n\n**Caveats**\n- The fleet's end-of-life rule (rated at 1,000 battery cycles, flagged as nearing end of life at 90% of that) only applies to laptops, so it doesn't cover this device.\n- Something unrelated I noticed: this device is failing the `screen_lock` check (medium severity) [DLT35MHGTH2D/2026-06-12]. Let me know if you want me to look into it.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 1324,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 1324,
+     "output_tokens": 361,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 361,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

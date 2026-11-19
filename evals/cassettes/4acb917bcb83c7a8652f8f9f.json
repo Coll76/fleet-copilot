@@ -1,0 +1,54 @@
+{
+ "key": "4acb917bcb83c7a8652f8f9f",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: viewer.\\n\\nRequest: Order a 2 TB SSD for 8NM23J95R5I6.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwz6g3vZ3azxSoyKMnp",
+  "content": [
+   {
+    "signature": "CAQSmwcKEAgUGAI4AUIIdGhpbmtpbmcSDKNSAUq5jFESKaXi1xoMb/ypflT2O7DnGz9pIjDR7PdasIuwFREQOzR3TsaSIhNyZOEBV+EWqe1I0O+z7kFg6prBlTEtwZk4Ak+zuB4quAYZ2FxoaekvZ4ZRgvQY4oZX3QaZMmliRX7KOxJ0h9XIZrpt10a4qRGwmx4lGhmq11Y4xoStKOIKtyMfJdw6YpcM3qJLzKqaAj//fzjLozkibplCxWpkOf5GsasWcZocwyUM42la04c6pT2n04huBK9Ecpq5lhs9yuRE9WqWHoFyAqWetLeNgJ1VV/U1lx4MZyDc/KfIMNEuInkiUucndAY268IhePr4mGYwBiX3YviBnBi0QTYHTMoBQsBf5HgwinCnZ3ZsZWuNLKYMEMIq7PvK2o9CqRFSf8p5BnlsbEgqEx1SmxVAhyNe6HaP9HDDzhGrFoN95X9wDc6DbDMzy7rgwJA2XhjTk82xu6KG833TWZoAdQxv1SlcQN74RthCjIv/Az4dbRT7O+mWfveFoU7wbsyWGIZsn8hRwwpOQNiuh6VM6hV7ja7Y7Z4HUpQkOrhiwnyYqpgT1H39IWcyIB8nVTFmknL4Grh06p6A+I/ZQU7GszEm59bwlFRAjjbtDaSe0H5TUOJ0VwLG6JrrK3YKx3FEvmVnVHe0M4yPldaE1+AN1XAXItdVI2XKjMK9c/SPWrIreOj/D0i3OB2cFJjR1zk3upOu1QfXcBx9Bos87mzcJRr0tWjZ4ywe5K6hIRQZc5lMAHmMdZP3RGMPKBXUsPOUE5+lMbHBZMwLOwqdsYzsqPuu2ygTSQbBXWBgGftON4cX6LZsSxIBQGrof84qqw1uye791dXoV21P49dlthnKcicBzrJdKg1AkUbnR2aG/6czQbpKUuoaytj8NS2JGatjxx8Ma8oG3qPw79am6WQRAv/JiZ48c/utREA1Mreo5tZULiexyuzobeFXh6pETbSQz+DI6RnGD/DM/FbMUBrNFHe0Dg9nHJuxV9ig/us23h/yPIDnAKsfCNUtwbRHcGy84p22yawcEpwgHhAiAf3+HjVo3gXre9MSYggt4wIkEXtNBHTb9Kp2hVMCgb+hwTvJ/mNbqU558aoxVUAaHWLW4BD1SDe7pQDBJq+xn68vzsI6eUj1lep8drIN6BN4w0gmgyzM5F/61LmVvJ7FfN0rFzI/b74qFvym86PhvXqtnhboIdOhlxgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"action\",\"restated_question\":\"Propose an upgrade order for a 2 TB SSD for device 8NM23J95R5I6 in organisation acme-001. The order is submitted for human approval, not executed directly.\",\"assumptions\":[\"8NM23J95R5I6 is a device serial or ID in acme-001. It will be confirmed with get_device before the order is proposed.\",\"The admin has a viewer role, so the order can only be proposed. It must be approved by someone with sufficient permissions before anything is ordered.\",\"A 2 TB SSD is an upgrade to the device's storage. The current disk capacity and usage will be shown so the approver has context.\",\"If the device is not found in acme-001, no order will be proposed and the admin will be told.\"],\"steps\":[{\"tool\":\"get_device\",\"purpose\":\"Confirm that 8NM23J95R5I6 exists in acme-001. Retrieve its owner, model, current disk capacity and usage to support the order.\"},{\"tool\":\"create_upgrade_order\",\"purpose\":\"Propose a 2 TB SSD upgrade order for 8NM23J95R5I6 for human approval, noting that the requester has a viewer role.\"}],\"may_propose_actions\":true,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 53,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 53,
+     "output_tokens": 529,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 529,
+   "output_tokens_details": {
+    "thinking_tokens": 120
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

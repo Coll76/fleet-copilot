@@ -1,0 +1,49 @@
+{
+ "key": "f21734e9a872074cee33067e",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Is our compliance getting better or worse over the month?\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwfq7uRSHWq7idneTWn",
+  "content": [
+   {
+    "text": "{\"intent\":\"insight\",\"restated_question\":\"Over the 30-day telemetry window for acme-001, has the number of devices failing compliance checks gone down (better) or up (worse)? Report the trend overall and for each check, using the change in the failing count over the window. Drift detections come from the compliance_drift detector.\",\"assumptions\":[\"'The month' means the 30-day telemetry window.\",\"'Better' means fewer devices failing compliance checks at the end of the window than at the start. 'Worse' means more.\",\"Pass/fail definitions follow the organisation's policy thresholds.\"],\"steps\":[{\"tool\":\"compliance_overview\",\"purpose\":\"Get current pass/fail for each compliance check and how the failing count changed over the 30-day window.\"},{\"tool\":\"run_insights\",\"purpose\":\"Run the compliance_drift detector to find devices or checks drifting out of compliance, so the trend comes from the detector rather than manual arithmetic.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 46,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 46,
+     "output_tokens": 332,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 332,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

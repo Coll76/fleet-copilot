@@ -1,0 +1,54 @@
+{
+ "key": "3182bc0fc2d065b5393a5bd4",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"status\\\": \\\"blocked_by_policy\\\", \\\"reason\\\": \\\"ram is not field-upgradeable on a Mac mini (Apple M2). Consider flag_device_for_replacement if the memory pressure is chronic instead.\\\", \\\"guidance\\\": \\\"Do not retry the same action. Explain to the admin why it was blocked, o"
+ },
+ "response": {
+  "id": "msg_011ChCwq9C79FF4QCd3HpTH5",
+  "content": [
+   {
+    "signature": "CAQS2AgKEAgUGAI4AUIIdGhpbmtpbmcSDH6wuQAXqyzJdwsbohoMy7svqY/DVP2uQyH1IjACO7rhJo0cKtHP4YlrJy4x7D5ShBC2DU+7BSxki//nc9zG4QEsh7Qml2Z1m3ql+RMq9QfT49Zg/YiyiETZn3cRCbrs/c7KXtPMToCWgmJul7xggEyMATHSn7Lf9YD6KK2liHC0forHE+PxZT+b0B4S+44lyZBX0dmitbd7XYNX/OnMotKJZV1+2p80sw5/vR7RF35s3iGOXiqs07M7m54e0Ho58u+Mp0WqcE5dKaFVIwb7QKy9Dyd0pBIOlfZFbwjcp+MSmFbX4lJJdxGPuXLI66La0HH72rJ0IzHgfs6IvUwHBsUAKqLT8uG/J8JRl0U4Y46EafhjfJVP3s8vjecv+JovqFq+SI8IiPRfaHKaSLs70eIHLn00LkSDD7Uj35Jsn5Z1bZnn0NNQ9aSXs0U73nucyD/QiNk6VYM0rftYfSv9Jh+mGuhypoaQbtym0Uj2FHHyCLU031a7OHg7di4CG3zjNnkKdfmcXv3R11oT/LSQdFujeJnZc4u5mj/AkifBqv4ghmRXiXXEg8C7/PSW0YP0MPzL0y5AjlQL/TgG1YPPEafhEX7xWTZ88H5X5l2L4AT2uTXvKo2smrysTY1IJwH8UyeWSl/u/EtpeXX2I7TrMqFxP5fUuWlOefDXqxhX0UVxeb11duH3XfMHcGINtd8CqJGv5Y5Y7BWVeoDaBuDXY7FJ1+2rBlbitL23G2BuIBBEeavaGOmsriNrmG1IhkiKmHXjwZ3LrJxGAc/3lQtNTINJQgJcndRR65uOaNE5riFErDD1kwaI2Uesvhvd0pc/MpzZSf3EjPyixnk1a6z7vDb/E5h8xff4ncv+PiJ3BsdDfg161k1FCbl2221vnx83qFWQcvlvivpUwBfIc7XLGcEPhtl+/fWZVmtbeOzE89hyxF7p3XO//Ig5c/FSH2ouPIpkKIorMXToSRlHOe3xJPLYBjcT/u+04VGLE3RQG/944AjkVHQPfVPKJrFQPjGlzR32nwRrVFGi9xOkHFPoFL/nuBxly33vx3EXOxgmvnB1Efh35Td9KOmJ7kEnOFVG5/i70ORxYrLUADUufI/zGpBzfh34q9NwXziqzVZx68mZ4wiq1WU7r1S4uTnn+CvwhKfW7HLMK0QEKky4zaJHFCTpsgXYB4tYrJ8apRQuoBKzVK15/IFHIzaNnepNGQqDAYvB7Y9j5YsQ0OpgIvuviE4GlYccjBZEX5H9m2r+Cbcal/X6qsmSZbI4HwpYuhFWuacVSGNtRC7u5wlfwF2RtFy3UIQhh5x25tehC1nt4/0hOuRTuZlZGxssRQg9u4strH4dESUMG7Ab+6jpfQVIFo8eePk22B7c+dZt1qE5+rks4LGDbbZ0SFsRK5bkqa+XLn+SHUx6qrmsisBPRRYPvBIvd+E5BFhvHiqQIp/wO04PoLd9bRgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "I couldn't create the RAM order. The policy check blocked it because the RAM in this Mac mini (Apple M2) can't be upgraded after purchase. The device does have chronic memory pressure, so flagging it for replacement is the action the evidence supports. I haven't proposed that yet; tell me if you want me to.\n\n**Evidence**\n- I3JLKILKQTAC is a Mac mini (desktop) with 8 GB RAM, owned by emp-initech-1001. Memory use is 89.0% in the latest snapshot [I3JLKILKQTAC/2026-06-12].\n- It meets the policy definition of RAM-constrained: memory use at or above 80% in at least 75% of snapshots. Use was at or above 80% in all 30 of 30 snapshots, averaging 91.8% with a peak of 98.4% [ram_pressure/I3JLKILKQTAC, I3JLKILKQTAC/2026-05-14, I3JLKILKQTAC/2026-06-12].\n- A 16 GB RAM order was blocked: \"ram is not field-upgradeable on a Mac mini (Apple M2).\" The check suggested flagging the device for replacement instead.\n\n**Proposed actions**\n- None created.\n\n**Other findings on this device (not part of your request)**\n- uTorrent, a peer-to-peer file-sharing client, was installed. It was first seen on 2026-05-29 and wasn't there on 2026-05-28. Policy rates it high severity [risky_software/I3JLKILKQTAC/uTorrent, I3JLKILKQTAC/2026-05-28, I3JLKILKQTAC/2026-05-29]. I can propose a ticket to have it removed.\n- The `os_up_to_date` compliance check is failing, at medium severity [I3JLKILKQTAC/2026-06-12].\n\n**Caveats**\n- uTorrent may be adding to the memory load, but the data doesn't show that either way.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4539,
+   "inference_geo": "global",
+   "input_tokens": 2874,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 4539,
+     "input_tokens": 2874,
+     "output_tokens": 800,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 800,
+   "output_tokens_details": {
+    "thinking_tokens": 149
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

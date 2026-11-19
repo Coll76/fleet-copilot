@@ -1,0 +1,59 @@
+{
+ "key": "5ca49c7da8661a0f69f203ce",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"thresholds\\\": {\\\"disk_low_free_pct\\\": 10, \\\"disk_trend_horizon_days\\\": 30, \\\"disk_trend_min_points\\\": 7, \\\"ram_pressure_used_pct\\\": 80, \\\"ram_pressure_min_share\\\": 0.75, \\\"battery_rated_cycles\\\": 1000, \\\"battery_approaching_share\\\": 0.9, \\\"battery_fcc_decline_pct\\\": 3.0, \\"
+ },
+ "response": {
+  "id": "msg_011ChCwTM2NpjEKtU2konru9",
+  "content": [
+   {
+    "signature": "CAQStQYKEAgUGAI4AUIIdGhpbmtpbmcSDHD7EguA7OOlpCMv4xoMf7z3LoxM3gxUMgZfIjAaYz9pe8HjdiX4ufupmf7A48QzwB6XsJG7T5EQXRyR+kPX+TSZC/NPP5/5w+x/pvMq0gXDRcnwXWqP+sfzHgH8VF8OVVjscTd9nxQ+n0ltPvqycHH9kzxKyH/pR7ofR7/YzT/mN9kK2vFH5KpcFHITRkIDvQHN3G+avb/gA2JH5fMgPVj156Fe94vzNznucEVBSeR2NPh95gHObDTfrHGKKmwI+4H981f4vU8WdywLgJanpukNXoxBJTFRDc0yHI3vdQpH6yBRvcggxO6ylwjDo96tPvNjP2hnLPduzxysNRCCATXpqHF49jjEsdIZsx6M4ozJ9e7K84vw+jongKrKT1qQddCZj9lGwxPV1A1xarIdX6YbbaEnKG2+1A06CcamF2T00bNKMZhMBM/HkrvmIApG/Vcndn+LPRNaWUkHy78T2um90iUZWL+rcbZ2eVjig1xaA9s0C29rifCiqyeBFnQlyosSYk878Qt58a0anu95TJhRIBrjo5/utIS3bB0YrRsRzmlF6dy65YBrRiCG9WCe7Tvx2Jt9RX6Sxdjrm11V+zH4uYJZwyJgbLJur/y9A6mQwJPKwNA77YP+hV9D0hSxNmP6GczR86z6a7EWok8DFgUdas76bhrEbpEu58JLTubScaW8UNI3Ew5JSm669jRwmj54cnjza94/QvcRktqTMCY+WMmrin7R8J4/u1Ro/hYFb5Ae8/YYSNHASGFVTJsVX50+ZRGlnqX8gVjcbGUS3UyIA73+6SC+GeMocq8ah5wVtV6Y+6k3MZcGGCspixvAvwvTFJRIcwQQ6HqquLuA8sBEE08dqbtgrP6Q6N9t4SB9v/qrEzqsAxj5MlOJmFLi/EzHr7cR3u1yFhAenzRMVio3+RxuY6tL8AJGFeubSgzYmC2gCj25JiPpS9oNnFcb+Szi+/eBspqh3E/Wmv5sA8qvk3vMAHrSCyStay0zDzpKCr1WOp+ehuBSsXdLlut5wTnwAb0C+VjdzufK+pu8XNfEqNlQSIMJhB7u9ABXHSzODxgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01FfHUVxnEyyeBzbY9YNoS2e",
+    "input": {},
+    "name": "compliance_overview",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 1135,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 1135,
+     "output_tokens": 103,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 103,
+   "output_tokens_details": {
+    "thinking_tokens": 73
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

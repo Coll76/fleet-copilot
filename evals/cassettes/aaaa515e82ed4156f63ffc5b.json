@@ -1,0 +1,49 @@
+{
+ "key": "aaaa515e82ed4156f63ffc5b",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Which devices will run out of disk within the next week if nothing changes?\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwhmTTcWkmxbJv66yzJ",
+  "content": [
+   {
+    "text": "{\"intent\":\"insight\",\"restated_question\":\"Which devices in acme-001, based on their disk usage trend over the 30-day telemetry window, are projected to reach full disk (or the policy's critical disk threshold) within the next 7 days if current growth continues?\",\"assumptions\":[\"'Run out of disk' means reaching the policy-defined critical/full disk threshold, taken from get_policy rather than assumed.\",\"The projection relies on the disk_trend detector's deterministic forecast, not on manual arithmetic.\",\"Devices already below the low-disk threshold are included as context via disk_low.\",\"The forecast assumes the current fill rate continues ('if nothing changes').\"],\"steps\":[{\"tool\":\"get_policy\",\"purpose\":\"Retrieve the disk thresholds and trend projection definitions that define 'running out of disk'.\"},{\"tool\":\"run_insights\",\"purpose\":\"Run the disk_trend and disk_low detectors to find devices projected to exhaust disk within 7 days, along with those already critically low.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 51,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 51,
+     "output_tokens": 357,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 357,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

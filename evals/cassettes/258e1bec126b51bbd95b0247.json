@@ -1,0 +1,54 @@
+{
+ "key": "258e1bec126b51bbd95b0247",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"detectors_run\\\": [\\\"ram_pressure\\\"], \\\"finding_count\\\": 1, \\\"findings\\\": [{\\\"finding_id\\\": \\\"ram_pressure/I3JLKILKQTAC\\\", \\\"kind\\\": \\\"ram_pressure\\\", \\\"device_id\\\": \\\"I3JLKILKQTAC\\\", \\\"employee_id\\\": \\\"emp-initech-1001\\\", \\\"severity\\\": \\\"high\\\", \\\"title\\\": \\\"Consistently R"
+ },
+ "response": {
+  "id": "msg_011ChCwf4gTqJ2opyKXACbft",
+  "content": [
+   {
+    "signature": "CAQSmgUKEAgUGAI4AUIIdGhpbmtpbmcSDBlgUBYZkqdQxMTF4hoMnahBmimFwxyNwbYXIjB3hIXXt37Sviye13gRcF7lpD8HXeN15TDCRAPkMZ/JBvDetMl56FYTZ25b2avCIZ4qtwTgaupiw+AQTE6Yao5oOjRx0hhwiNrT2ZxRDqb9FrUpbC7NldO+WL/mBk4W03Hk5KvYfGIJrt8Zg0o9yxkvqgL7ZX0oExk5FO4IEZSMjO9z1CFDsG+ru16eV7I6fMlFqdkBbi/I65Lh78woMz/3J0N9bfrtHRNwySINQnC6KI/RyKl19BrpHiMm85RmiOgpCPMgasccgyQK1xJ4zyWyfrbao4XLgW0kcB58FQPYv76uJvHKo+RWoQHR/f1hSsrHo4DYXEDC4t0GDCUyQMPb/OaDtv+qjEr3xVlTYfKO6rQMpIKqCR1QIKTO35VDASE0aEwUxCvcFKDCiIVMQ1gYLKp8X/TGeYf6imo5UdJF3J0Jnk8VgJNPZLfw3FfrK16ULzMNaQcap3qL8Xu/N2mnM6g9GpkNPvOwCxQR6PDxNG1LumQyzFqgC/k9al3ELfLIeh7CP0rpdvqFja3KArdBpZ2NJbuHKCWIa6OWVQEkWS8JytsYxSWMRpPAttUvyH8cuRNRjjxQjNYPhW+VGEB2leL7pfEctJuyikRqwwQtsqueCniAyFw6Ao/QPtWRSedR36ysYee+F6sqHr4hC4VU/Hrf4CTT2rOn6VbpSpXXq5alj9eU9ZtefxTzGWdMbddnauoooIiJvo7QnD92jvLPocJWjXAMqwMtJpNDYfvltpPjZE2sc3TXZHix/E5nFSPLE0KmNwTZ3fCo/REO6F8OzFjLeEnHvMpoGpDpwcbu4u555MNvOFTzPZoYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "Only one device in initech-003 is consistently short on RAM: the **Mac mini I3JLKILKQTAC** (8 GB RAM, owned by emp-initech-1001) [ram_pressure/I3JLKILKQTAC].\n\n**Evidence**\n- Its memory use was at or above 80% in all 30 of its 30 snapshots, with an average of 91.8% and a peak of 98.4% [ram_pressure/I3JLKILKQTAC].\n- Snapshots from across the 30-day window show the same high usage [I3JLKILKQTAC/2026-05-14, I3JLKILKQTAC/2026-05-24, I3JLKILKQTAC/2026-06-02, I3JLKILKQTAC/2026-06-12].\n- This is rated high severity [ram_pressure/I3JLKILKQTAC].\n- No other device in the organisation was flagged [ram_pressure/I3JLKILKQTAC].\n\n**Caveats**\n- **Definition used:** under the policy, a device counts as consistently short on RAM if memory use is at or above **80%** in at least **75%** of its snapshots (policy settings `ram_pressure_used_pct` and `ram_pressure_min_share`). A single high reading isn't enough.\n- I only looked at memory use. You asked which devices are affected, so I haven't suggested any fixes such as closing apps or adding memory.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 1501,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 1501,
+     "output_tokens": 499,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 499,
+   "output_tokens_details": {
+    "thinking_tokens": 34
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

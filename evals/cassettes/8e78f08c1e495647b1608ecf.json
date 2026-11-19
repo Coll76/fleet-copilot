@@ -1,0 +1,54 @@
+{
+ "key": "8e78f08c1e495647b1608ecf",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: globex-002. Admin role: it_admin.\\n\\nRequest: Give me the three most urgent issues in our fleet right now.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwjP95uZHahzrXPF7Fw",
+  "content": [
+   {
+    "signature": "CAQS7wcKEAgUGAI4AUIIdGhpbmtpbmcSDLoq2445q0JVpC7lTRoMKPGSXqRAuJvNhDwvIjASJEltFG6RgGRo/gXO1evtceunxXTxJj3e07w8rxUc/KT+kcHixnQmDkQd44rUQ58qjAexPOTqb+vh1N1tHaRLBEos0/bdWGxQ9WgWCSoo7OiH3MOtT+ibsb6wNiwwv/d7bRHZZZf+GdeKVWTy8Elg8CntQ02NirTkJ/lv8kJ+nyTGrAergSqTHH7he9mkEo5iLaN3JQqLCImakCWsniXcZnTgdkapBDFfj7mVMoKhcxH843NiJdQ8WpbK68oSEM+8CDZc23ChyDRD8DLAUjQJji01bbldnHLoWsRPSTJ1e7ZC6KpI3hxBMuwi2yElma7pgpGfT5ZgdEk9mD7vGLOPu5NSKCsPLkacXMIQewcj5AEBzx7lmTToaSZqow9LDxRUjf0EnbtIERksjzMeagEnBnfcPm8eXNHdJfKvGwHrKQdk7tr2IZ2ablKbPt4w9HTzZQMiYLOZZ7VnjTeZGXo2hXvHtjhbGGAmRw5331lVOG4BjP04WNcagVtW5yJXmk49UOZ5cld1iixvuCrZTBzYm4gsEJ/TY0HQKf1CJUfjLKc9Rlwb1W4Nk4p/Wd/qWhx2/u39kMPt+J+oQopggYN2KV1kLxD03DQBa5j0qzoPOFquezJk+ggu/5lX8qjGFk9MQCCcZtU7xaWafvyNkpHXhNDFf0G7tcyDLpR1vaW9aLxCt5mcnLaTFbrOH50N3XfRrTmUy+p/vCVPmGtEjkpDn+s8vbDJBHZIU1suXHsWrX915iltk4EvUyatZ+fMaZ2h931xnaasB1wbxSpnTExVCnMj3oOF+vdGB+K44ze3gP0wJ4OSIx+eGhX8qr6Jl1CZ5wJELCl3asKDcjd0NkjSSAQ+HFz1KvUfqrG6PA84/gvYvWEtJ1sNDu30L6TP8yob+0NNsDzwK95UDHGNd//DlrTBKWZpAR8r3XI+6i6ZXKG2xHj9chCetOjjv9V13zF3HRZy6Ri8PlUeubGc7+wMrJzGMIXak7+Vwi8IqeQfhWl7zw3CMsUZsKV/QYtm6V31vwc0UyrzBBfnqmJ+v1FecWz/mhQsRjDnam5HqQyyU86ZL3U53m2W/B4+19+xrvPPNe+VyD2sWYBt/P+Fh0Wwr1lTwiRqUc7Nl9cYzcf7ls21/PSj+8+LH7kFEtr1Um9g7r6BKf+zs+Mc3Stsp3QKvWqyHDzK6qm+FT3u1sV87epOi3opxdZtOnS2+ZcQSrWexENTYq/tIqG/6B4RKgwxcn5GQD/s9Uaq3cBus8gR70KyMMx96M7cmGcRAMX9nxgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"insight\",\"restated_question\":\"Identify the three highest-priority problems across the globex-002 fleet based on current telemetry. Urgency is ranked by detector severity, then by the number of devices affected. Problems include low disk, disk-fill trends, RAM pressure, batteries near end-of-life, compliance drift, risky software, telemetry gaps and failing compliance checks.\",\"assumptions\":[\"'Urgent' means the highest severity reported by the deterministic detectors. Ties are broken by how many devices are affected and by whether the problem is getting worse over the 30-day window.\",\"'Right now' means the latest snapshot, plus any trend findings that point to imminent problems.\",\"An issue can be a fleet-wide pattern (for example, a compliance check failing on many devices) or a critical problem on a single device.\",\"The admin wants a summary, not remediation actions.\"],\"steps\":[{\"tool\":\"run_insights\",\"purpose\":\"Run all detectors (disk_low, disk_trend, ram_pressure, battery_eol, compliance_drift, risky_software, telemetry_gap) to get severity-ranked findings and affected device counts.\"},{\"tool\":\"compliance_overview\",\"purpose\":\"Get current pass/fail counts per compliance check and how the failing count changed, so widespread or worsening compliance failures can be weighed against the detector findings.\"}],\"may_propose_actions\":false,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 49,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 49,
+     "output_tokens": 621,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 621,
+   "output_tokens_details": {
+    "thinking_tokens": 151
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

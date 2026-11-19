@@ -1,0 +1,54 @@
+{
+ "key": "565f70c6b51dc8510082945e",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"status\\\": \\\"pending_approval\\\", \\\"proposal_id\\\": \\\"P-12e60b5f\\\", \\\"policy_facts\\\": {\\\"employee_devices\\\": [\\\"8NM23J95R5I6\\\"]}, \\\"note\\\": \\\"Nothing has been executed. A human must approve this proposal.\\\"}\",\"is_error\":false,\"tool_use_id\":\"toolu_015bokmn7PhVQtYvs6TgjyB3\",\"ty"
+ },
+ "response": {
+  "id": "msg_011ChCwvnESjNdTmgyQL3KxG",
+  "content": [
+   {
+    "signature": "CAQSyAUKEAgUGAI4AUIIdGhpbmtpbmcSDA+nH2Zg8+19pEBEahoMBr917lWliieVzk/zIjB7RUJmnDoJ9dfdAbQa4Paw2aDuw0HupusmOOMfetOMZSGsQR9RW84kmw/GouitHZwq5QR5Cg3NnpDbup4zjlmpM/8HsK1Fg1+KIEH41lDIDRG7Qoo8ie46VxubFmoFod+5Iy9p7u2Q9D2THClKWC9y+qi5BxwriXKTdtVR3Gng+2yARNPBq57z8i0KChRPGMMPkFbEOttrewhuINwx/F0HcnmN2LvnMnuuHqq3yjT6XFgvuKKMOOvNTqBwHBJ/AB+TH72khn1dAfxukGjw/dnpdONrfO91d083tvVzjAbTsuW0Cwykm36/GgkjqxKLolVXYkiX0qJV1M/+bF+Yw0OdB0Vy01wJvRR+B4sDl9TPxoWMTB7w9gysBRHZyPu4BXLcpvedGK7ZK9i5cbI+ZMDJanAZUzmDbQuNGPduN7O99mQUShvKJvRbCZYEpEraOd/8Rk5DOYiJxc4AgKZDlukq6q2RkDzRPdafxgjWoGcvhcY2ubrYUGSLRrO4grzpTd/TweOAOMH+cC0GhSCSF3mYgzsNaqwDqqs3XzQb5fHupVBmPvNB8Mjv7TDmAefeTAx8uWHYyjyBYMeH/aIYvzgKaWs8bqChB8bYFrIAjXsGsNp0x2gw7T4+qBrR3by1HRCnaxpLrwtcX706UKZUZDL2NlVTbT0C1Q7ig7j619FzsTRddDZUHANs9AuDu6LfKeQe34kAFlS0TuqtzsGIK0ds8degOyAoccEaUVAvK6YtTJbdWLiRYpQvbyFsxuKSbvsmW0VFdGXoajLoXN+galjpSfbRHkjO0cAu02c8nDQ2tqTxk+RQ3bcxI2WW3qbkMZlm8jaFVzGysTVgaX0maYRlBjcJI+0dgx3vMS7dgj+JO3QqqcG7Z9N1GAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "I've proposed a message to the device's owner, emp-acme-1005, saying the disk is almost full. Nothing has been sent yet; it needs your approval. The disk is well under the policy threshold for \"low disk\", which is less than 10% free, and it's filling up fast [disk_low/8NM23J95R5I6].\n\n**Evidence**\n- **Owner:** 8NM23J95R5I6 is a ThinkPad X1 Carbon (acme-thinkpad-8) that belongs to emp-acme-1005 [8NM23J95R5I6/2026-06-12].\n- **Disk space:** The latest snapshot shows 26.5 GB free out of 1024 GB, which is 2.6% [disk_low/8NM23J95R5I6, 8NM23J95R5I6/2026-06-12].\n- **Trend:** Free space fell from 176.8 GB to 26.5 GB over 30 snapshots, about 5.2 GB a day. At that rate the disk will be full in about 5 days [disk_trend/8NM23J95R5I6, 8NM23J95R5I6/2026-05-14, 8NM23J95R5I6/2026-06-12].\n\n**Proposed actions**\n- **P-12e60b5f:** Message to emp-acme-1005 saying how much space is left and that the disk is close to full, and asking them to clear unneeded files or contact IT. Awaiting approval.\n\n**Caveats**\n- **Other problems on this device:** The latest snapshot also shows:\n  - The battery reports \"Service Recommended\" with 1157 cycles, above the 1000 cycles the policy uses as the battery's rated life.\n  - It's running Windows 10 22H2, below the policy minimum of Windows 11.\n  - The screen-lock and OS-up-to-date compliance checks are failing.\n\n  [8NM23J95R5I6/2026-06-12]\n- **Possible follow-up:** At about 5 days until the disk is full, you may also want to open a disk-cleanup ticket. I haven't proposed one; tell me if you'd like it.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4539,
+   "inference_geo": "global",
+   "input_tokens": 2744,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 4539,
+     "input_tokens": 2744,
+     "output_tokens": 721,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 721,
+   "output_tokens_details": {
+    "thinking_tokens": 35
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

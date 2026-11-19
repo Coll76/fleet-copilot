@@ -1,0 +1,80 @@
+{
+ "key": "9600bcdd346cdda5d9518dcb",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"thresholds\\\": {\\\"disk_low_free_pct\\\": 10, \\\"disk_trend_horizon_days\\\": 30, \\\"disk_trend_min_points\\\": 7, \\\"ram_pressure_used_pct\\\": 80, \\\"ram_pressure_min_share\\\": 0.75, \\\"battery_rated_cycles\\\": 1000, \\\"battery_approaching_share\\\": 0.9, \\\"battery_fcc_decline_pct\\\": 3.0, \\"
+ },
+ "response": {
+  "id": "msg_011ChCwdXAcJv78dqZFqpvTv",
+  "content": [
+   {
+    "signature": "CAQS1gUKEAgUGAI4AUIIdGhpbmtpbmcSDLK+c4+FJdLGArj1AhoMQb3KD14ofF7uasi5IjDUENawuWMVMbTYvnfXXmMc3Q7+P5FjG8NstmgN/ZD4I1hsXwrYg1KDEG3K3Rvt1LEq8wQyqPhntIIhWomkg/RGYl5Iyy+TWcf5IY4iXIhZMp52S2ed1bKSNgm7gxJk0KZ3mxZTyNmcCNRjmylpVuHUyIosx41fFSgP4C3m6YoruFuO3cJE3UGgQrvO+q+XIFJ8BO4VPs7gzGuQUp5+3xNlBybB9lXDQkj17WEIzJGqsOMoA7me0h+J7uVKCZd/8ZYOEKRprEZ0rE6Vn8/Ynu8YuuMWEuU2tqqQE6FqjShWLwjQX2bfqH+agn9vJqT6U02bV5AndMA5SBQxllU5YsYvYIBBkAHiZX5pTS1x22hOyUwB9h/dmxIpzoQtgNfLIrX0AVmrsBzmlQWSFVVeyGhsFtMEEWNporxzYG7ci9WiS0edbL/jYaXt6k5cMsTR9YWflxs+5zWxrR55TFMxJSOXUxCbdUju2ol3tjmoi1NWfXV8exnLZaVo/H1LV/IsPxqI3clRk2LZNgnX4TW2RpE65HKTi+y/fdk5hIKfha3qRZ9P3tLE964lqcuRbD+APVaV9skxOMGMf41YL15/2Hd76osMT+bjneW3loEV9kzEhAOZH1z+PqK1xM4M8QJFVVkzodbJp75a7UhQM6hA3ZrmOtcPG2TCWQmD7L43KZoH5VyxckQRnGoMnSyp3gIFEwjK4ppeYR1PtTcwMOddHDOAAGoXU9LU3AwPHVKlJzNs4FRY57RwFmvdqFtUGufs43B4XWI2IR5dyjz7drZruQbOH0H/baiqwe9UTA+spFXm4Dcu1AIfmY2mCXLNDe0hROat0dTWcy/oCdDV7XWywyrGCPAm9KmmkVq9eeSMYDIKGXp9sfiMviFGhr2GDPu+/mtpoAaInC0YAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01AmomXaQue3YeprvAtQ8ebL",
+    "input": {
+     "device_id": "DARFCP0BQM2G",
+     "metrics": [
+      "disk_free_pct",
+      "disk_free_gb"
+     ]
+    },
+    "name": "get_device_history",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_01XuQqU147o47SVyqCf3RM1X",
+    "input": {
+     "device_id": "RLD7WV7J82SH",
+     "metrics": [
+      "disk_free_pct",
+      "disk_free_gb"
+     ]
+    },
+    "name": "get_device_history",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 2329,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 2329,
+     "output_tokens": 244,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 244,
+   "output_tokens_details": {
+    "thinking_tokens": 42
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

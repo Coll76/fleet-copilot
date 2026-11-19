@@ -1,0 +1,49 @@
+{
+ "key": "c1f9ddc3b6d39ae8d8a671e9",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"detectors_run\\\": [\\\"ram_pressure\\\"], \\\"finding_count\\\": 2, \\\"findings\\\": [{\\\"finding_id\\\": \\\"ram_pressure/JRZSGXVMKE6M\\\", \\\"kind\\\": \\\"ram_pressure\\\", \\\"device_id\\\": \\\"JRZSGXVMKE6M\\\", \\\"employee_id\\\": \\\"emp-globex-1005\\\", \\\"severity\\\": \\\"high\\\", \\\"title\\\": \\\"Consistently RA"
+ },
+ "response": {
+  "id": "msg_011ChCwX74ra7vBmsXrThqp9",
+  "content": [
+   {
+    "text": "Two machines are short on memory. Both are 16 GB ThinkPad X1 Carbons: **JRZSGXVMKE6M** (emp-globex-1005), rated high severity, and **CUXW0BQSV1B7** (emp-globex-1004), rated medium [ram_pressure/JRZSGXVMKE6M, ram_pressure/CUXW0BQSV1B7].\n\n**Evidence**\n- **JRZSGXVMKE6M (emp-globex-1005), high severity:** memory use was at or above 80% in 29 of 30 snapshots (97%). It averaged 87.6% and peaked at 94.1% on 16 GB of RAM [ram_pressure/JRZSGXVMKE6M, JRZSGXVMKE6M/2026-05-14, JRZSGXVMKE6M/2026-05-24, JRZSGXVMKE6M/2026-06-03, JRZSGXVMKE6M/2026-06-12].\n- **CUXW0BQSV1B7 (emp-globex-1004), medium severity:** memory use was at or above 80% in 28 of 30 snapshots (93%). It averaged 85.0% and peaked at 92.8% on 16 GB of RAM [ram_pressure/CUXW0BQSV1B7, CUXW0BQSV1B7/2026-05-14, CUXW0BQSV1B7/2026-05-25, CUXW0BQSV1B7/2026-06-03, CUXW0BQSV1B7/2026-06-12].\n- No other device in globex-002 was flagged by the memory check, and the results were not cut off [ram_pressure/JRZSGXVMKE6M, ram_pressure/CUXW0BQSV1B7].\n\n**Caveats**\n- **Definition used:** a device counts as short on memory if usage is at or above 80% in at least 75% of its snapshots over the 30-day window. This comes from the policy settings the detector reported [ram_pressure/JRZSGXVMKE6M]. A machine with a single spike would not be flagged.\n- **Cause not checked:** I haven't looked at what is using the memory, such as installed software. If you'd like, I can check that next to see whether a software cleanup could help before a RAM upgrade is considered. No actions have been proposed.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 1371,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 1371,
+     "output_tokens": 767,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 767,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

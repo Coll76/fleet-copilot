@@ -1,0 +1,54 @@
+{
+ "key": "ea907f4f64382dcc309e32ab",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":[{\"content\":\"{\\\"as_of\\\": \\\"latest snapshot of each device\\\", \\\"window\\\": [\\\"2026-05-14\\\", \\\"2026-06-12\\\"], \\\"devices\\\": 10, \\\"checks\\\": [{\\\"check_id\\\": \\\"disk_encryption\\\", \\\"severity\\\": \\\"high\\\", \\\"passing\\\": 10, \\\"failing\\\": 0, \\\"failing_devices\\\": []}, {\\\"check_id\\\": \\\"screen_lock\\\", \\"
+ },
+ "response": {
+  "id": "msg_011ChCwgFEjxKGSUQiVptTUK",
+  "content": [
+   {
+    "signature": "CAQStgYKEAgUGAI4AUIIdGhpbmtpbmcSDKrW5OCGVfuY0WOq4RoM2vJM8P0KcllTSB2wIjD0ZqTUM1DhRKbTiDv0w912XrxVLQrlI6qBHi16ImmmEYGrKCNFofAlAiQqLTg9suAq0wWDTNq4ox1HdWnCI07nvLN/OySggsfXMQu8KcJX5qZp2qSpZyxIwnaRtekVAdL/Kd92aaCW3A9eG0OVgnrhfuRvuMFVyhGsuP0v5p5nops92ai4V1gq0lUUCAYwy6PW+ogelSd37yyHscU8TobHBHlNt4MbFyIKZtNdC2bWb97nofpCwD2qdQUlXjQRpIMfG/qleoJ5QUvWjDqbSUpB3/90hFg+VWOFixmhL/yFiRR+l9PE9H7rIutAA+t91yLV1MxPq96W5BxtfHUqruMPvyWBZYPL3QoHise7sVoxgIwo2EX/zB51xW0jyhPbIZOa9KBRwOhlPrps5+n8fNKumaP0cZDPKxMlxaq0g51a0Al4Md6s0MTQsYfT7JmkfR+yR0wt13e4BbWFGNjuGL5vmbhluQSFVe9PYJ1K4tRvzDpcd0buS7WPML5OxqFTt6PiwMzfEmw9J8Y2JlBul2b4zP6CjD11VBBOD0bkrEwU4psq/NUISH0lav6mD0lCKiZfNa6W7RgG0euRpmwuY9LJkW6BCh7MwwPRQG0REWwS0ZEVrw8JNOr8WMlxZyo5sdx6olW5pxrw4qTZXmHZm4Y4KLVvDk2blRVonuc5GX31DY+xp6pRCsjH0ZQkII5wEm5vXlaMNMbSH/u6v9szr8jwzA4LMPdpiNq9OvBMcU7jPeTw3fLT/fD5KP4Ham5TGPYz0cdJFkkWihLlreztpE4zAQLJ7heOQQcwqsAs5t3yZKYArIIrPGUs6ioQ/kBaD2BPp5VY6rNRm33XFHx+UA/ZT1VSGiHS4lHzZA4819kC64fWj7XLl6mAAknmtwP5HCBmUjh/rxOig5S7jYWcQWWz0SbKqJk3N+KCAovXP4o4tZr+U3sGXveB7CeRVuLAlkyfSA6xe2vE24/N6FujCD5G7joyikUTpAKg03pDIhZK5DbktqI1ooxLufaaVkGyUOfi+q7e9ScYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "Compliance **got worse** over the window from 2026-05-14 to 2026-06-12. The whole decline comes from `screen_lock`, which went from 0 failing devices on the first day to 5 on the last day. The other two checks stayed the same.\n\n**Evidence**\n- **screen_lock (medium severity):** 0 failing devices on the first day and 5 on the last. All 5 passed at first, then started failing and have failed every day since:\n  - 1LYSSFD074BB: failing since 2026-05-22, 22 snapshots in a row [compliance_drift/1LYSSFD074BB/screen_lock, 1LYSSFD074BB/2026-05-21, 1LYSSFD074BB/2026-05-22]\n  - MT7PJB7N5LRE: failing since 2026-05-28, 16 snapshots [compliance_drift/MT7PJB7N5LRE/screen_lock, MT7PJB7N5LRE/2026-05-27, MT7PJB7N5LRE/2026-05-28]\n  - 8NM23J95R5I6: failing since 2026-05-30, 14 snapshots [compliance_drift/8NM23J95R5I6/screen_lock, 8NM23J95R5I6/2026-05-29, 8NM23J95R5I6/2026-05-30]\n  - DLT35MHGTH2D: failing since 2026-06-01, 12 snapshots [compliance_drift/DLT35MHGTH2D/screen_lock, DLT35MHGTH2D/2026-05-31, DLT35MHGTH2D/2026-06-01]\n  - DSYPSES7SKBB: failing since 2026-06-01, 12 snapshots [compliance_drift/DSYPSES7SKBB/screen_lock, DSYPSES7SKBB/2026-05-31, DSYPSES7SKBB/2026-06-01]\n- **os_up_to_date (medium severity):** 9 failing devices on both the first and last day, so no change. It's still the most widespread problem: 9 of 10 devices fail it today [1LYSSFD074BB/2026-06-12, 7VP16KHV88LM/2026-06-12, 8NM23J95R5I6/2026-06-12, 9MXJVZ1I0DKA/2026-06-12, DSYPSES7SKBB/2026-06-12, M4XVHUV1MEPZ/2026-06-12, MT7PJB7N5LRE/2026-06-12, Q3VUITEGQ400/2026-06-12, XSU9UUDGU6AC/2026-06-12].\n- **disk_encryption (high severity):** 0 failing devices on both days. All 10 devices pass.\n\n**Caveats**\n- \"Better or worse\" here only compares the number of failing devices on the first and last day of the window. The compliance tool doesn't give a daily count for the whole fleet, so I can't show the full curve. The drift findings show the `screen_lock` failures appearing one by one between 2026-05-22 and 2026-06-01.\n- The drift detector only flags checks that went from passing to failing. The 9 `os_up_to_date` failures were already there when the window started, so they don't show up as drift.\n- The first-day and last-day counts come straight from the compliance tool, which doesn't attach snapshot ids to them. The citations above point to the underlying device snapshots and findings.",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 3362,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 3362,
+     "output_tokens": 1206,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 1206,
+   "output_tokens_details": {
+    "thinking_tokens": 77
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

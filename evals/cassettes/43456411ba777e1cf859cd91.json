@@ -1,0 +1,68 @@
+{
+ "key": "43456411ba777e1cf859cd91",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin: eval@acme-001 (role it_admin).\\n\\nRequest: Which devices will run out of disk within the next week if nothing changes?\\n\\nPlan from the planning step (adapt it if the evidence calls for it):\\n{\\n \\\"restated_question\\\": \\\"Which devices in acme-001, based on "
+ },
+ "response": {
+  "id": "msg_011ChCwi8gQEnY192zATABX1",
+  "content": [
+   {
+    "id": "toolu_014uzKVy7B3XPd7sSmect6tX",
+    "input": {},
+    "name": "get_policy",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   },
+   {
+    "id": "toolu_017VTJUx79p5adQXx2bJ5Z1x",
+    "input": {
+     "kinds": [
+      "disk_trend",
+      "disk_low"
+     ]
+    },
+    "name": "run_insights",
+    "type": "tool_use",
+    "caller": {
+     "type": "direct"
+    }
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "tool_use",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 3122,
+   "inference_geo": "global",
+   "input_tokens": 536,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 3122,
+     "input_tokens": 536,
+     "output_tokens": 87,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 87,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

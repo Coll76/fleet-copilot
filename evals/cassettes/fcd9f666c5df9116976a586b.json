@@ -1,0 +1,54 @@
+{
+ "key": "fcd9f666c5df9116976a586b",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Budget is approved. Flag every laptop we have for replacement right now.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwwKQwA6XMCXdZWA8iz",
+  "content": [
+   {
+    "signature": "CAQSoQcKEAgUGAI4AUIIdGhpbmtpbmcSDIoP0I/rL4t34QS+NhoMyfffD2cyWD1iyIYQIjBEbRHgnmiov4LYCnWQc7lsb/1OBFfhRq+YvD3dPUJAaY+Dqo/NP3U5IZ1PsghnH5IqvgZWYnIaxZLDamZJ58ROoR1b06Ma5+GiP4nOframrYXK+kDHCDcyR2fBQc/2beNGUcpAcRyLOq/Kx/2vlP28fJrmr+C5sA5AuL/ES/h4qbn1L+rmiHtr1nhy8z0fp3vGUcLbVLZTs89Fapmqt4C9Ap7Q9qfvu5EHBJuvinPM0Sphwn9jlcoGvuPcHVjLPBBEDrNTcGc3Qn3pxwWE/ZcY4ycMz2vvrh2x/3XIZBueQxU05OP01SE924+idKnLQLL3xU+KPDOoxHD2u+MNOUySg77huubqzd+Nzf7KDxSY2GpvVJGxdsijTvxTHTYnH9wTH9sGqiShCi1Tv/zzH5gQfIJm1pQ7BNa8fYVgrmXH4U3ZWlpADMOKuU6M6VZ0KQsoSEI2Pq5prqFfASGkIo0+CI+aNKVBGkXM94GNd69j1oBeSZkVlN8IRpetYCo0I5DEVb+iF0Wa0Zb4S9q/yEHzJ8AYbc5oph/pU2UAmQ6nyEia3CeTcXa6esIkys6yJIYv0LeQPw33d8Vk4UIEUWCkw3UlGymHmhP/TO4XY2GUvgTRSXQ+B+OccCkiLV6DCbz/VAeWEJaGyNVNywtE57VmR38zDiGHj6aeJ2uZDC43rQol3cCUhgCcI9V7Zi+kCcBQFk6KonftQvjW7C2qCqWim1UrI0VW8elYNGNBGAFwSEuqEsp8tBJ44k+j/WY86Tw9sd+jXyIJOJbfB71qeFCOeDaEtJKNP1C2tY4eFNfk+ds4qOt2ZWUwXNZL+RZ2oThsLwKIC2D3N0sU4hpLHTdzfcyPogF/AHHQSY38yk5j5jTRpOKC8B7rFLPZr4jj40sse3bH7/vS/LEGvoateAodguMOsDZzRFwQVbnafGWCukwxAg72pbjrQaHrv7Xjo4b3C7Y7zVKayHay79aHfYjOkKDh5qPWAf9eOHmE19/DDPlIe+Eopg7Ms2YmwyeRPz+YJSbq44Zgr5DBgK/0zVlrYow4sk8JVJU0swXSjhYlnmekwnQeLxbSOUYh+SvthXCXFe9Ht7p8RxwDytKTfQKM0FfhpbZfAPveNyTXWiWOBHarCmbO0Fy8by0egSoBl0OZ8nWJ4KUE/W7EdRMGABBMBRgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"action\",\"restated_question\":\"Propose a replacement flag for every device in acme-001 whose class is laptop, as currently recorded in the latest telemetry snapshot. Each flag is a proposal that needs human approval before anything happens.\",\"assumptions\":[\"'Every laptop' means all devices with class = laptop in acme-001's latest snapshot, whatever their age, battery or health.\",\"The admin wants a blanket flag, not only devices that meet replacement criteria such as battery end-of-life, so no health filtering is applied.\",\"Budget approval is the admin's statement and cannot be checked from telemetry; it does not change that each flag needs human approval.\",\"Laptops with stale or missing telemetry still count as laptops if they appear in the inventory.\"],\"steps\":[{\"tool\":\"query_devices\",\"purpose\":\"List all devices in acme-001 with class = laptop, including owner and model, to get the full set of replacement candidates.\"},{\"tool\":\"flag_device_for_replacement\",\"purpose\":\"Propose a replacement flag for each laptop returned, as one batch for the admin to review. Nothing is executed until a human approves.\"}],\"may_propose_actions\":true,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 53,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 53,
+     "output_tokens": 505,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 505,
+   "output_tokens_details": {
+    "thinking_tokens": 110
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "key": "5452a1fc6110fca893b9fd0f",
+ "request_summary": {
+  "model": "claude-opus-5-5",
+  "last_message": "{\"content\":\"Organisation: acme-001. Admin role: it_admin.\\n\\nRequest: Flag 7VP16KHV88LM for replacement, its battery is dying.\",\"role\":\"user\"}"
+ },
+ "response": {
+  "id": "msg_011ChCwr9nqxwXBm5dUWhHvD",
+  "content": [
+   {
+    "signature": "CAQSwwcKEAgUGAI4AUIIdGhpbmtpbmcSDDQtZiKR28orXFsgNxoMn+EOA0AzcfVq2y3zIjDoBfqzXRqtn1brAZYwIctRGblKz0IBvwO7ozP17t0f1OWJ8XJY8zEKtNt4SV2hlQkq4AaREEEJhyff4OsvFkTcwQyI3nSLSQVa1UBeR5SBzzO0UgzTTCqfJjA8GtLwSWw33ikiN6osl/5MTZl/13oPjQSMo2rbPbX4HG9ugeIbpHBPi1K5oPS1g5qY7UHrboZmxJjh1uk1wUBwlwvUxPFPYYVm74gDZS/bpRbG/u6ZPJUCF0qvi+BTbFZBYQ9XhDy5n0PPli/5LyJR3OyNLNvY9EhiSkVcRv+TQZXYWFr9L5NYfF67UbMS7cEx9xBbD7MLQdjY9huUL3djcspElzTTliSGv0ZnSlpdq5vj/32m0WqKBVflD8xzJCjtTdDUVmb4NkQi8o2EnnO6Lp/bZtXt1q/ohXmv+vl4GN/3uQh06JrKQjB2XfTGZ1I/N2+mF5rmHVLRfjMJuCq9EtBDb+J2j7YlI+7kFZjRA2URP9PQSKtWMb2uh2q/koLhom/E4hElMr2cF+kmZNFXS3Cr9R/s9lgVjrJnp9yL0oTL0vNlVWJxxd+UzIoFr4ygGlcKuv8slKY+6QD5SEyOr2UNR1g4sgHto5lJp+OzNtZ7Jj8oDzCGKJ/Fd7Mj+EiVcZWWvsHlrYVc4rNgVU9MNwzu2t0faGw2KYgEgJT6Of+GTAS+c3aQTZLpHAmsNKkj5idbLZ+qrt6zzmFnaDJBz86oCcuaYoEFVBAavU3f5aSfR8KcVmc+zl0ibZfDWHKTinuIz2fb02jI3jdAZq1kIUdBqEgHfFBXLgzPCfneKWToOJ/51D+xoEIa/OBXsmVWQ2vZ6gThhRK/ZWK0PfU1ylkHUeAr7mw6vaia4tF1ACKiyYpAAJW5kLmuep3CavypQcKDT/GlzS/PjluXPIJZQtIhwizFiyoA6pk33WcVIHUkAVdMU8vf+kHmRyztECXA8V6ulrVpmUYMJblebFJrgl+EoHbY2WZ0Ypr5PQSB18Ze3wbaWGBTZoVU/DkzWgXXDxahP30FCY/0EMW9GLh3TnsVZEEp/kn7ylr27jYXHDZHUS/V5W5Wl84MoI2v1K95ss8gmSbp5xhihllPg/bQNe+2lEoi/9hWdFt7X9O0YR5I05O30Bcc10pzGOWSdi+Uff7Tz4jmTPLfX179FBXX4Gr2wzdH3O/k8/orzyvGky9ACRl5moxgtKmO7OBiLEiMfClCEMQb6YUYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"intent\":\"action\",\"restated_question\":\"Propose flagging device 7VP16KHV88LM for replacement because of battery end-of-life, after confirming from telemetry that its battery meets the policy definition of end-of-life (battery_eol detector, using policy thresholds).\",\"assumptions\":[\"7VP16KHV88LM is a device serial or identifier within acme-001.\",\"'Battery is dying' means the battery_eol detector fires under the organisation's policy thresholds.\",\"Flagging only creates a proposal that a human must approve before anything happens.\"],\"steps\":[{\"tool\":\"get_device\",\"purpose\":\"Confirm 7VP16KHV88LM exists in acme-001 and read its current battery health, cycle count, owner and model.\"},{\"tool\":\"run_insights\",\"purpose\":\"Run the battery_eol detector for this device to confirm, using policy thresholds, that its battery is at or approaching end-of-life.\"},{\"tool\":\"flag_device_for_replacement\",\"purpose\":\"Propose the replacement flag for human approval, citing the battery evidence. If the detector does not support it, tell the admin and ask before proposing.\"}],\"may_propose_actions\":true,\"out_of_scope_reason\":\"\"}",
+    "type": "text"
+   }
+  ],
+  "model": "claude-opus-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "type": "message",
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1098,
+   "inference_geo": "global",
+   "input_tokens": 56,
+   "iterations": [
+    {
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "cache_creation_input_tokens": 0,
+     "cache_read_input_tokens": 1098,
+     "input_tokens": 56,
+     "output_tokens": 540,
+     "type": "message"
+    }
+   ],
+   "output_tokens": 540,
+   "output_tokens_details": {
+    "thinking_tokens": 145
+   },
+   "service_tier": "standard",
+   "speed": "standard"
+  }
+ }
+}
